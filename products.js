@@ -13,6 +13,19 @@
 
 window.PRODUCTS = [
   {
+    id: "cheese-slimball-pajama",
+    type: "추천템",
+    partner: "slit",
+    category: "아기옷",
+    name: "치즈실내복 [26 봄 가을] 슬림볼 실내복 착붙핏",
+    note: "봄가을에 입히는 슬림볼 실내복, 착 붙는 핏",
+    sale: "15,900원",
+    link: "https://slit.to/s/vs62jt",
+    img: "img/cheese-slimball.svg",
+    emoji: "👕",
+    color: "yellow"
+  },
+  {
     id: "cheese-couple-pajama",
     type: "추천템",
     partner: "slit",
@@ -21,7 +34,7 @@ window.PRODUCTS = [
     note: "알록달록 커플 실내복, 낙낙한 핏",
     sale: "팔로워 혜택가 16,900원",
     link: "https://slit.to/s/u5zgrh",
-    img: "",
+    img: "img/cheese-couple.svg",
     emoji: "👕",
     color: "peach"
   },
@@ -47,7 +60,7 @@ window.PRODUCTS = [
     note: "겨울에 입히기 좋은 디즈니 실내복, 낙낙한 핏",
     sale: "19,800원",
     link: "https://slit.to/s/sipqge",
-    img: "",
+    img: "img/cheese-disney.svg",
     emoji: "👕",
     color: "peach"
   },
