@@ -34,7 +34,7 @@ window.PRODUCTS = [
     note: "봄가을에 입히는 밤부 실내복, 낙낙한 핏",
     sale: "16,900원",
     link: "https://slit.to/s/eu8m8h",
-    img: "",
+    img: "img/cheese-bamboo.svg",
     emoji: "👕",
     color: "mint"
   },
