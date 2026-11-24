@@ -7,77 +7,78 @@
 <meta name="description" content="결제는 엄마가, 검수는 푸루가! @puruland_ 푸루랑 직접 써본 공구 & 추천템 모음">
 <meta property="og:title" content="푸루맘 상점 🧸">
 <meta property="og:description" content="결제는 엄마가, 검수는 푸루가 · 우리 집 실사용 합격템만 모았어요">
-<meta property="og:image" content="puru_up.png">
-<link rel="icon" href="profile.png">
+<meta property="og:image" content="%EA%B7%80%EC%97%AC%EC%9A%B4%20%ED%91%B8%EB%A3%A8%EB%A7%98%20%EC%95%84%EA%B8%B0%20%EC%97%84%EC%A7%80%EC%B2%99%20%EB%A1%9C%EA%B3%A0.png">
+<link rel="icon" href="%EA%B7%80%EC%97%AC%EC%9A%B4%20%ED%91%B8%EB%A3%A8%EB%A7%98%20%EC%95%84%EA%B8%B0%20%EC%97%84%EC%A7%80%EC%B2%99%20%EB%A1%9C%EA%B3%A0.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Jua&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#1d1d1f;--paper:#fffdf8;--pink:#ff6f9c;--yellow:#ffe14d;--sky:#7ec8ff;--mint:#6fdcb0}
-*{box-sizing:border-box}body{margin:0;background:#f4f1ea;color:var(--ink);font-family:Jua,sans-serif}
-.w{max-width:480px;margin:0 auto;padding:12px 12px 40px}
-.page{background:var(--paper);border:3px solid var(--ink);padding:10px;border-radius:6px}
-.title{position:relative;text-align:center;padding:16px 8px 12px;border:3px solid var(--ink);margin-bottom:8px;
-background:radial-gradient(circle,#ffd1e0 1.6px,transparent 1.8px) 0 0/10px 10px,var(--yellow)}
-.title h1{font-family:"Black Han Sans";font-size:46px;margin:0;color:#fff;-webkit-text-stroke:2px var(--ink);text-shadow:4px 4px 0 var(--ink);letter-spacing:1px}
-.title .ep{display:inline-block;background:var(--ink);color:#fff;font-size:13px;padding:3px 10px;transform:rotate(-2deg)}
-.title .sub{font-family:"Nanum Pen Script";font-size:24px;margin-top:2px}
-.strip{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}
-.pn{position:relative;border:3px solid var(--ink);height:190px;overflow:hidden;background:#fff}
-.pn img{position:absolute;bottom:-4px;left:50%;transform:translateX(-50%);height:150px}
-.pn.a{background:radial-gradient(circle,#cfe8ff 1.5px,transparent 1.7px) 0 0/9px 9px,#fff}
-.pn.b{background:repeating-linear-gradient(45deg,#fff 0 8px,#fff3c4 8px 16px)}
-.pn.c{background:repeating-conic-gradient(from 0deg at 50% 70%,#ffe14d 0 10deg,#fff 10deg 20deg)}
-.bb{position:absolute;top:8px;left:6px;right:6px;background:#fff;border:2.5px solid var(--ink);border-radius:50%;padding:7px 4px;font-size:13px;text-align:center;line-height:1.2;z-index:2}
-.bb:after{content:"";position:absolute;left:46%;bottom:-11px;border:6px solid transparent;border-top:8px solid var(--ink)}
-.boom{position:absolute;top:10px;left:50%;transform:translateX(-50%) rotate(-8deg);white-space:nowrap;font-family:"Black Han Sans";font-size:24px;color:var(--pink);-webkit-text-stroke:1.5px var(--ink);z-index:2}
-.fx{position:absolute;font-family:"Black Han Sans";font-size:16px;color:var(--ink);z-index:2}
-.hero{border:3px solid var(--ink);margin-top:8px;position:relative}
-.hero img{display:block;width:100%}
-.hero .tag{position:absolute;right:8px;bottom:8px;background:#fff;border:2.5px solid var(--ink);padding:4px 10px;font-size:13px;border-radius:14px}
-.bar{position:sticky;top:0;z-index:5;background:#f4f1ea;padding:10px 0 6px}
-.search{display:flex;gap:8px;align-items:center;background:#fff;border:3px solid var(--ink);border-radius:24px;padding:8px 14px;font-size:15px}
-.chips{display:flex;gap:6px;margin-top:8px;overflow:auto;scrollbar-width:none}.chips::-webkit-scrollbar{display:none}
-.chips button{flex:none;border:2.5px solid var(--ink);background:#fff;padding:5px 12px;font:inherit;font-size:14px;border-radius:16px;color:var(--ink);cursor:pointer}.chips button.on{background:var(--ink);color:#fff}
-.sec{font-family:"Black Han Sans";font-size:24px;margin:20px 0 10px;display:flex;align-items:center;gap:8px}
-.sec:before{content:"";width:12px;height:24px;background:var(--pink);border:2px solid var(--ink)}
-.card{display:grid;grid-template-columns:120px 1fr;border:3px solid var(--ink);background:#fff;margin-bottom:14px;box-shadow:6px 6px 0 var(--ink)}
-.card .ph{border-right:3px solid var(--ink);background:radial-gradient(circle,#ffe9a8 1.6px,transparent 1.8px) 0 0/9px 9px,#fff7d6;display:grid;place-items:center;padding:8px;font-size:46px}
-.card .ph img{width:100%}
-.card .in{padding:10px 12px;position:relative}
-.card .nar{display:inline-block;background:var(--ink);color:#fff;font-size:12px;padding:2px 8px}
-.nar.hot{background:#ff3b5c}
-.card h3{font-family:"Black Han Sans";font-weight:400;font-size:19px;margin:6px 0 4px;line-height:1.25}
-.card .pr{display:flex;gap:6px;align-items:baseline;flex-wrap:wrap}.card .pr b{font-family:"Black Han Sans";font-weight:400;font-size:18px;color:var(--pink)}.card .pr s{font-size:12px;color:#888}
-.card .say{position:relative;background:#fff;border:2.5px solid var(--ink);border-radius:16px;padding:6px 10px;font-family:"Nanum Pen Script";font-size:21px;line-height:1.1;margin:6px 0}
-.card .say:before{content:"";position:absolute;left:-12px;top:12px;border:6px solid transparent;border-right:9px solid var(--ink)}
-.go{display:inline-block;background:var(--pink);color:#fff;border:2.5px solid var(--ink);border-radius:18px;padding:5px 14px;font-size:14px;box-shadow:3px 3px 0 var(--ink)}
-.ad{display:block;font-size:10px;color:#777;margin-top:6px}
-.empty{border:3px dashed var(--ink);background:#fff;text-align:center;padding:16px;font-size:14px}
-.end{text-align:center;margin-top:24px;font-family:"Black Han Sans";font-size:22px}
-.end small{display:block;font-family:Jua;font-size:13px;color:#555;margin-top:4px}
+:root{--ink:#222;--pink:#FF6FA3;--yellow:#FFE14D;--cream:#FFF6D6}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Jua,sans-serif}
 html{scroll-behavior:smooth}
+.w{max-width:480px;margin:0 auto;padding-bottom:40px}
+.topnote{text-align:center;font-size:11px;color:#777;margin:0;padding:7px 12px}
+.face{display:inline-block;border-radius:50%;border:2.5px solid var(--ink);background:url("%EC%95%84%EA%B8%B0%20%ED%91%9C%EC%A0%95%209%EC%A2%85%20%EA%B0%90%EC%A0%95%20%EC%BD%9C%EB%9D%BC%EC%A3%BC%20-%20%EB%B3%B5%EC%82%AC%EB%B3%B8.png") 0 0/300% 300% no-repeat #fff;flex:none}
+.f-laugh{background-position:0% 0%}.f-wow{background-position:50% 0%}.f-angry{background-position:100% 0%}.f-cry{background-position:0% 50%}.f-giggle{background-position:50% 50%}.f-curious{background-position:100% 50%}.f-clap{background-position:0% 100%}.f-sleep{background-position:50% 100%}.f-eat{background-position:100% 100%}
+.hd{padding:14px 16px 10px;background:radial-gradient(#F5C800 1.3px,transparent 1.6px) 0 0/10px 10px,var(--yellow);border-bottom:3px solid var(--ink)}
+.top{display:flex;align-items:center;justify-content:space-between}
+.top img{width:56px;height:56px;border-radius:50%}
+.ep{font-size:12px;background:var(--ink);color:var(--yellow);padding:4px 10px;border-radius:6px}
+h1{font-family:"Black Han Sans";font-weight:400;font-size:44px;background:#fff;border:3px solid var(--ink);display:inline-block;padding:2px 14px;margin:10px 0 6px;box-shadow:4px 4px 0 var(--ink);transform:rotate(-2deg)}
+.sub{font-size:15px;margin-bottom:12px}
+.strip{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}
+.pn{border:3px solid var(--ink);background:#fff;position:relative;height:170px;overflow:hidden}
+.pn .mom{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;object-position:50% 0;transform:scaleX(-1);background:#DDEFFF}
+.pn .ph{position:absolute;inset:0;border:0;border-radius:0;background-size:300% 300%}
+.pn .t{position:absolute;left:5px;right:5px;background:#fff;border:2px solid var(--ink);border-radius:12px;font-size:12px;padding:3px 6px;line-height:1.2;text-align:center;z-index:2}
+.pn .n{position:absolute;bottom:0;left:0;right:0;background:var(--ink);color:#fff;font-size:11px;text-align:center;padding:2px;z-index:2}
+.pn.win{background:repeating-conic-gradient(from 0deg at 50% 60%,var(--pink) 0 10deg,#fff 10deg 20deg)}
+.pn.win .face{position:absolute;left:8%;top:34px;width:84%;aspect-ratio:1;border-width:3px}
+.pn.win .t{top:5px;background:var(--pink);color:#fff;font-family:"Black Han Sans";font-size:19px}
+.faces{display:flex;gap:6px;margin:12px 0 2px;align-items:center;font-size:13px;flex-wrap:wrap}.faces .face{width:34px;height:34px;border-width:2px}
+.bar{position:sticky;top:0;z-index:5;background:var(--cream);padding:12px 16px 6px}
+.search{display:flex;gap:8px;align-items:center;background:#fff;border:2.5px solid var(--ink);border-radius:99px;padding:9px 16px;font-size:15px}
 .search input{border:0;outline:0;flex:1;font:inherit;background:transparent;min-width:0;color:var(--ink)}
+.chips{display:flex;gap:6px;margin-top:8px;overflow:auto;scrollbar-width:none}.chips::-webkit-scrollbar{display:none}
+.chips button{flex:none;border:2px solid var(--ink);background:#fff;padding:5px 12px;font:inherit;font-size:14px;border-radius:99px;color:var(--ink);cursor:pointer}.chips button.on{background:var(--ink);color:var(--yellow)}
+main{padding:0 16px}
+.sec{font-family:"Black Han Sans";font-size:22px;margin:22px 0 10px;display:flex;align-items:center;gap:8px}.sec .face{width:40px;height:40px}
+.card{display:grid;grid-template-columns:112px 1fr;gap:12px;border:3px solid var(--ink);background:#fff;margin-bottom:16px;box-shadow:4px 4px 0 var(--ink);border-radius:14px;padding:12px;position:relative}
 a.card{text-decoration:none;color:inherit;scroll-margin-top:130px}
-a.card:active{transform:translate(3px,3px);box-shadow:3px 3px 0 var(--ink)}
+a.card:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
+.card .ph{border-radius:10px;background:#FFF1A8;display:grid;place-items:center;font-size:44px;min-height:130px;overflow:hidden}
+.card .ph img{width:100%;display:block}
+.card .in{min-width:0}
+.card .nar{display:inline-block;background:var(--yellow);font-size:11px;padding:2px 8px;border-radius:99px}
+.nar.hot{background:#ff3b5c!important;color:#fff}
+.card h3{font-family:"Black Han Sans";font-weight:400;font-size:18px;margin:6px 0 4px;line-height:1.25}
+.card .say{background:#FFF1A8;border-radius:12px;padding:6px 9px;font-family:"Nanum Pen Script";font-size:19px;line-height:1.1;margin:6px 0 8px}
+.card .pr{display:flex;gap:6px;align-items:baseline;flex-wrap:wrap}.card .pr b{font-family:"Black Han Sans";font-weight:400;font-size:18px;color:var(--pink)}.card .pr s{font-size:12px;color:#888}
+.go{display:inline-block;background:var(--pink);color:#fff;border-radius:99px;padding:6px 14px;font-size:14px}
+.ad{display:block;font-size:10px;color:#777;margin-top:6px}
+.stk{position:absolute;left:78px;top:-12px;width:50px;height:50px;border:3px solid #fff;box-shadow:0 2px 6px #0003;transform:rotate(8deg)}
+.stk2{position:absolute;left:6px;top:128px;background:var(--ink);color:var(--yellow);font-size:12px;padding:2px 8px;border-radius:6px;transform:rotate(-4deg)}
 .card.closed{filter:grayscale(.8);opacity:.6}
-.card.hit{animation:hit 1.4s steps(2) 2}@keyframes hit{50%{box-shadow:6px 6px 0 var(--pink);border-color:var(--pink)}}
-.topnote{text-align:center;font-size:11px;color:#777;margin:8px 0 0}
+.card.hit{animation:hit 1.4s steps(2) 2}@keyframes hit{50%{box-shadow:4px 4px 0 var(--pink);border-color:var(--pink)}}
+.empty{border:3px dashed var(--ink);background:#fff;text-align:center;padding:16px;font-size:14px;border-radius:14px}
+.end{text-align:center;margin:28px 16px 0;font-family:"Black Han Sans";font-size:22px}
+.end small{display:block;font-family:Jua;font-size:13px;color:#555;margin-top:4px}
 .note{font-size:10px;color:#777;margin-top:10px;line-height:1.6;font-family:Jua}.note p{margin:3px 0}
 </style>
 </head>
 <body>
 <div class="w">
-<div class="page">
- <div class="title"><span class="ep">EP.1 결제는 엄마가, 검수는 푸루가</span><h1>푸루맘 상점</h1><div class="sub">우리 집 실사용 합격템만 모았어요</div></div>
- <div class="strip">
-  <div class="pn a"><div class="bb">푸루야~<br>이거 써볼까?</div><img src="mom.png" alt="" onerror="this.style.display='none'"></div>
-  <div class="pn b"><div class="bb">흐음...<br>검수 중</div><span class="fx" style="right:8px;bottom:60px">꼼꼼</span><img src="puru_white.png" alt="" style="height:135px"></div>
-  <div class="pn c"><div class="boom">합격!!</div><img src="puru_up.png" alt="" style="height:150px"></div>
- </div>
- <div class="hero"><img src="PURULAND%20_%20%EC%95%84%EA%B8%B0%EB%B0%A9%EA%BE%B8%EB%AF%B8%EA%B8%B0%20%EC%BA%94%EB%B0%941%20%EC%86%90%EA%B8%80%EC%94%A8%20%ED%86%B5%EC%9D%BC%20%EC%88%98%EC%A0%95%EB%B3%B8%209%EC%9E%A5%20%28%EC%9D%B8%EC%8A%A4%ED%83%80%EA%B7%B8%EB%9E%A8%20%EA%B2%8C%EC%8B%9C%EB%AC%BC%284_5%29%29%EC%9D%98%20%EC%82%AC%EB%B3%B8.png" alt="푸루 추천템 PURU&#39;S ITEM"><a class="tag" href="https://www.instagram.com/puruland_/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">@puruland_</a></div>
-</div>
-<div class="bar"><label class="search">🔍<input id="q" type="search" placeholder="찾는 육아템이 있나요?"></label><div class="chips" id="chips"></div></div>
 <p class="topnote">이 페이지에는 쿠팡·네이버 제휴 링크가 있어 구매 시 수수료를 받을 수 있어요.</p>
+<header class="hd">
+ <div class="top"><span class="ep">EP.2 푸루의 검수 일지</span><a href="https://www.instagram.com/puruland_/" target="_blank" rel="noopener"><img src="%EA%B7%80%EC%97%AC%EC%9A%B4%20%ED%91%B8%EB%A3%A8%EB%A7%98%20%EC%95%84%EA%B8%B0%20%EC%97%84%EC%A7%80%EC%B2%99%20%EB%A1%9C%EA%B3%A0.png" alt="purumom"></a></div>
+ <h1>푸루맘 상점</h1><div class="sub">엄마가 고르고, 푸루가 표정으로 심사했어요</div>
+ <div class="strip">
+  <div class="pn"><img class="mom" src="%ED%8C%8C%EB%9E%80%20%EB%8B%88%ED%8A%B8%20%EC%A1%B0%EB%81%BC%EB%A5%BC%20%EC%9E%85%EC%9D%80%20%EC%97%AC%EC%84%B1%20%EC%B4%88%EC%83%81.png" alt="푸루맘"><div class="t" style="bottom:24px">푸루야~ 이거 써볼까?</div><div class="n">푸루맘</div></div>
+  <div class="pn"><span class="face f-curious ph"></span><div class="t" style="top:5px">흐음… 검수 중</div><div class="n">푸루</div></div>
+  <div class="pn win"><div class="t">합격!!</div><span class="face f-clap"></span></div>
+ </div>
+ <div class="faces">오늘의 심사위원 표정 <span class="face f-laugh"></span><span class="face f-wow"></span><span class="face f-giggle"></span><span class="face f-eat"></span><span class="face f-sleep"></span></div>
+</header>
+<div class="bar"><label class="search">🔍<input id="q" type="search" placeholder="상품 이름으로 찾기"></label><div class="chips" id="chips"></div></div>
 <main id="list"></main>
 <div class="end">다음 화에 계속…<small>새 에피소드는 인스타 @puruland_ 에서 제일 먼저!</small><div class="note" id="disc"></div></div>
 </div>
@@ -117,7 +118,7 @@ a.card:active{transform:translate(3px,3px);box-shadow:3px 3px 0 var(--ink)}
     var href = (s === 'open' || s === 'pick') ? esc(p.link) : '#' + esc(p.id);
     var ext = (s === 'open' || s === 'pick') ? ' target="_blank" rel="noopener"' : '';
     return '<a class="card' + (s === 'closed' ? ' closed' : '') + '" id="' + esc(p.id) + '" href="' + href + '"' + ext + '>' +
-      '<div class="ph">' + ph + '</div><div class="in">' + nar(p) + '<h3>' + esc(p.name) + '</h3>' +
+      (s === 'pick' ? '<span class="face f-laugh stk"></span><span class="stk2">푸루 합격!</span>' : '') + '<div class="ph">' + ph + '</div><div class="in">' + nar(p) + '<h3>' + esc(p.name) + '</h3>' +
       (price ? '<div class="pr">' + price + '</div>' : '') + (p.note ? '<div class="say">' + esc(p.note) + '</div>' : '') +
       '<span class="go">' + go + '</span>' + (DISC[p.partner] ? '<span class="ad">' + DISC[p.partner].short + '</span>' : '') + '</div></a>';
   }
@@ -143,10 +144,10 @@ a.card:active{transform:translate(3px,3px);box-shadow:3px 3px 0 var(--ink)}
     var pick = items.filter(function(p){ return state(p) === 'pick'; });
     var closed = items.filter(function(p){ return state(p) === 'closed'; });
     var h = '';
-    if (open.length || cur === '전체' || cur === '🔥 공구') h += '<div class="sec">진행 중인 공구</div>' + (open.length ? open.map(card).join('') : '<div class="empty">다음 화에 새 공구가 찾아와요! 🧸</div>');
-    if (soon.length) h += '<div class="sec">오픈 예정 공구</div>' + soon.map(card).join('');
-    if (pick.length) h += '<div class="sec">푸루 합격템</div>' + pick.map(card).join('');
-    if (closed.length) h += '<div class="sec">지난 에피소드</div>' + closed.map(card).join('');
+    if (open.length || cur === '전체' || cur === '🔥 공구') h += '<div class="sec"><span class="face f-wow"></span>진행 중인 공구</div>' + (open.length ? open.map(card).join('') : '<div class="empty">다음 화에 새 공구가 찾아와요! 🧸</div>');
+    if (soon.length) h += '<div class="sec"><span class="face f-curious"></span>오픈 예정 공구</div>' + soon.map(card).join('');
+    if (pick.length) h += '<div class="sec"><span class="face f-clap"></span>푸루 합격템</div>' + pick.map(card).join('');
+    if (closed.length) h += '<div class="sec"><span class="face f-sleep"></span>지난 에피소드</div>' + closed.map(card).join('');
     if (!items.length) h = '<div class="empty" style="margin-top:20px">찾는 상품이 없어요 🥲</div>';
     document.getElementById('list').innerHTML = h;
   }
