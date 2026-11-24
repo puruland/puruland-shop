@@ -67,7 +67,7 @@ a.card:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
 </head>
 <body>
 <div class="w">
-<p class="topnote">이 페이지에는 쿠팡·네이버 제휴 링크가 있어 구매 시 수수료를 받을 수 있어요.</p>
+<p class="topnote">이 페이지에는 쿠팡·네이버·슬릿 제휴 링크가 있어 구매 시 수수료를 받을 수 있어요.</p>
 <header class="hd">
  <div class="top"><span class="ep">EP.2 푸루의 검수 일지</span><a href="https://www.instagram.com/puruland_/" target="_blank" rel="noopener"><img src="%EA%B7%80%EC%97%AC%EC%9A%B4%20%ED%91%B8%EB%A3%A8%EB%A7%98%20%EC%95%84%EA%B8%B0%20%EC%97%84%EC%A7%80%EC%B2%99%20%EB%A1%9C%EA%B3%A0.png" alt="purumom"></a></div>
  <h1>푸루맘 상점</h1><div class="sub">푸루가 발견하고, 검수하고, 합격시켰어요</div>
@@ -98,7 +98,8 @@ a.card:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
   function esc(t){ return String(t == null ? '' : t).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
   var DISC = {
     coupang: {name: '쿠팡', short: '쿠팡 인플루언서 링크 · 수수료를 받아요', full: '이 포스팅은 쿠팡 인플루언서 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.'},
-    naver: {name: '네이버', short: '네이버 브랜드커넥트 링크 · 수수료를 받아요', full: '※이 포스팅에 있는 일부 상품은 네이버 브랜드커넥트(쇼핑커넥트) 활동의 일환으로, 판매 발생 시 수수료를 제공받습니다.'}
+    naver: {name: '네이버', short: '네이버 브랜드커넥트 링크 · 수수료를 받아요', full: '※이 포스팅에 있는 일부 상품은 네이버 브랜드커넥트(쇼핑커넥트) 활동의 일환으로, 판매 발생 시 수수료를 제공받습니다.'},
+    slit: {name: '슬릿', short: '슬릿 제휴 링크 · 수수료를 받아요', full: '이 포스팅은 아임웹 슬릿(Slit) 제휴 활동의 일환으로, 구매 시 일정액의 수수료를 제공받습니다.'}
   };
   function nar(p){
     var s = state(p), bits = [];

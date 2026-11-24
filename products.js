@@ -3,8 +3,8 @@
 //
 // id       : 인포크링크에 넣을 주소 끝부분 → https://puruland-shop.netlify.app/#id
 // type     : "공구" 또는 "추천템"(일반 제휴 링크)
-// partner  : "coupang"(쿠팡 인플루언서) / "naver"(네이버 브랜드커넥트) / 없으면 비워두기 → 카드와 페이지 아래에 수수료 문구가 자동으로 붙어요
-// category : 이유식템 / 놀이템 / 외출템 / 책 등 (카테고리 버튼이 자동으로 생겨요)
+// partner  : "coupang"(쿠팡 인플루언서) / "naver"(네이버 브랜드커넥트) / "slit"(아임웹 슬릿) / 없으면 비워두기 → 카드와 페이지 아래에 수수료 문구가 자동으로 붙어요
+// category : 이유식템 / 놀이템 / 외출템 / 책 / 아기옷 등 (카테고리 버튼이 자동으로 생겨요)
 // start/end: 공구 시작일·마감일 (YYYY-MM-DD). 마감일이 지나면 자동으로 '지난 공구'로 가요
 // sale     : 공구가·할인가 (크게 보임)   price : 정가 (줄 그어짐)
 // note     : 한 줄 설명      link : 구매 링크
@@ -12,6 +12,19 @@
 // color    : peach / mint / sky / yellow / lav
 
 window.PRODUCTS = [
+  {
+    id: "cheese-disney-pajama",
+    type: "추천템",
+    partner: "slit",
+    category: "아기옷",
+    name: "치즈실내복 [26 겨울] 메리 디즈니 실내복 낙낙핏",
+    note: "겨울에 입히기 좋은 디즈니 실내복, 낙낙한 핏",
+    sale: "19,800원",
+    link: "https://slit.to/s/sipqge",
+    img: "",
+    emoji: "👕",
+    color: "peach"
+  },
   {
     id: "art-play-book",
     type: "추천템",
