@@ -13,6 +13,20 @@
 
 window.PRODUCTS = [
   {
+    id: "suupy-nasal-aspirator",
+    type: "추천템",
+    partner: "slit",
+    category: "육아템",
+    name: "수피(SUUPY) 전동 콧물 흡인기 TX-5",
+    note: "아기 콧물 붔 때 쓰는 전동 콧물 흡인기",
+    sale: "248,000원",
+    price: "298,000원",
+    link: "https://slit.to/s/m5ywd6",
+    img: "",
+    emoji: "👶",
+    color: "sky"
+  },
+  {
     id: "cheese-slimball-pajama",
     type: "추천템",
     partner: "slit",
