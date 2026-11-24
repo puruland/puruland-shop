@@ -10,8 +10,9 @@
 <meta property="og:image" content="%EA%B7%80%EC%97%AC%EC%9A%B4%20%ED%91%B8%EB%A3%A8%EB%A7%98%20%EC%95%84%EA%B8%B0%20%EC%97%84%EC%A7%80%EC%B2%99%20%EB%A1%9C%EA%B3%A0.png">
 <link rel="icon" href="%EA%B7%80%EC%97%AC%EC%9A%B4%20%ED%91%B8%EB%A3%A8%EB%A7%98%20%EC%95%84%EA%B8%B0%20%EC%97%84%EC%A7%80%EC%B2%99%20%EB%A1%9C%EA%B3%A0.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Jua&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Jua&family=Gaegu:wght@700&display=swap" rel="stylesheet">
 <style>
+
 :root{--ink:#222;--pink:#FF6FA3;--yellow:#FFE14D;--cream:#FFF6D6}
 *{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Jua,sans-serif}
 html{scroll-behavior:smooth}
@@ -34,40 +35,48 @@ h1{font-family:"Black Han Sans";font-weight:400;font-size:44px;background:#fff;b
 .pn.win .face{position:absolute;left:8%;top:34px;width:84%;aspect-ratio:1;border-width:3px}
 .pn.win .t{top:5px;background:var(--pink);color:#fff;font-family:"Black Han Sans";font-size:19px}
 .faces{display:flex;gap:6px;margin:12px 0 2px;align-items:center;font-size:13px;flex-wrap:wrap}.faces .face{width:34px;height:34px;border-width:2px}
-.bar{position:sticky;top:0;z-index:5;background:var(--cream);padding:12px 16px 6px}
-.search{display:flex;gap:8px;align-items:center;background:#fff;border:2.5px solid var(--ink);border-radius:99px;padding:9px 16px;font-size:15px}
-.search input{border:0;outline:0;flex:1;font:inherit;background:transparent;min-width:0;color:var(--ink)}
-.chips{display:flex;gap:6px;margin-top:8px;overflow:auto;scrollbar-width:none}.chips::-webkit-scrollbar{display:none}
-.chips button{flex:none;border:2px solid var(--ink);background:#fff;padding:5px 12px;font:inherit;font-size:14px;border-radius:99px;color:var(--ink);cursor:pointer}.chips button.on{background:var(--ink);color:var(--yellow)}
-main{padding:0 16px}
-.sec{font-family:"Black Han Sans";font-size:22px;margin:22px 0 10px;display:flex;align-items:center;gap:8px}.sec .stamp{flex:none;font-family:"Black Han Sans";font-size:13px;padding:5px 8px;border:2.5px solid var(--ink);border-radius:8px;transform:rotate(-6deg);box-shadow:2px 2px 0 var(--ink)}
-.card{display:grid;grid-template-columns:112px 1fr;gap:12px;border:3px solid var(--ink);background:#fff;margin-bottom:16px;box-shadow:4px 4px 0 var(--ink);border-radius:14px;padding:12px;position:relative}
-a.card{text-decoration:none;color:inherit;scroll-margin-top:130px}
-a.card:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
-.card .ph{border-radius:10px;background:#FFF1A8;display:grid;place-items:center;font-size:44px;min-height:130px;overflow:hidden}
-.card .ph img{width:100%;display:block}
-.card .in{min-width:0}
-.card .nar{display:inline-block;background:var(--yellow);font-size:11px;padding:2px 8px;border-radius:99px}
-.nar.hot{background:#ff3b5c!important;color:#fff}
-.card h3{font-family:"Black Han Sans";font-weight:400;font-size:18px;margin:6px 0 4px;line-height:1.25}
-.card .say{background:#FFF1A8;border-radius:12px;padding:6px 9px;font-family:"Nanum Pen Script";font-size:19px;line-height:1.1;margin:6px 0 8px}
-.card .pr{display:flex;gap:6px;align-items:baseline;flex-wrap:wrap}.card .pr b{font-family:"Black Han Sans";font-weight:400;font-size:18px;color:var(--pink)}.card .pr s{font-size:12px;color:#888}
-.go{display:inline-block;background:var(--pink);color:#fff;border-radius:99px;padding:6px 14px;font-size:14px}
-.ad{display:block;font-size:10px;color:#777;margin-top:6px}
-.stk{position:absolute;left:78px;top:-12px;width:50px;height:50px;border:3px solid #fff;box-shadow:0 2px 6px #0003;transform:rotate(8deg)}
-.stk2{position:absolute;left:6px;top:128px;background:var(--ink);color:var(--yellow);font-size:12px;padding:2px 8px;border-radius:6px;transform:rotate(-4deg)}
-.card.closed{filter:grayscale(.8);opacity:.6}
-.card.hit{animation:hit 1.4s steps(2) 2}@keyframes hit{50%{box-shadow:4px 4px 0 var(--pink);border-color:var(--pink)}}
-.empty{border:3px dashed var(--ink);background:#fff;text-align:center;padding:16px;font-size:14px;border-radius:14px}
-.end{text-align:center;margin:28px 16px 0;font-family:"Black Han Sans";font-size:22px}
-.end small{display:block;font-family:Jua;font-size:13px;color:#555;margin-top:4px}
-.note{font-size:10px;color:#777;margin-top:10px;line-height:1.6;font-family:Jua}.note p{margin:3px 0}
 .pn .t.fnd{top:5px;background:var(--yellow);font-family:"Black Han Sans";font-size:19px}
+.stamp{flex:none;font-family:"Black Han Sans";font-size:13px;padding:5px 8px;border:2.5px solid var(--ink);border-radius:8px;transform:rotate(-6deg);box-shadow:2px 2px 0 var(--ink)}
+.sec{font-family:"Black Han Sans";font-size:21px;margin:24px 16px 10px;display:flex;align-items:center;gap:8px}
+.pick{margin:0 16px;border:3px solid var(--ink);border-radius:18px;background:#fff;box-shadow:5px 5px 0 var(--ink);overflow:hidden;display:block;color:inherit;text-decoration:none}
+.pick .lab{display:flex;align-items:center;justify-content:space-between;background:var(--ink);color:var(--yellow);padding:8px 14px;font-family:"Black Han Sans";font-size:19px;letter-spacing:1px}
+.pick .lab small{font-family:Jua;font-size:12px;color:#fff;letter-spacing:0}
+.pick .body{display:grid;grid-template-columns:120px 1fr;gap:12px;padding:12px;align-items:center}
+.pick .ph{border-radius:12px;overflow:hidden;background:#FFF1A8;aspect-ratio:1}.pick .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.pick h3{font-family:Jua;font-weight:400;font-size:14px;line-height:1.3;margin:0 0 4px}
+.cats{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 16px}
+.cat{border:3px solid var(--ink);border-radius:18px;box-shadow:4px 4px 0 var(--ink);padding:14px;height:118px;position:relative;overflow:hidden;cursor:pointer;color:inherit;text-decoration:none;display:block}
+.cat b{font-family:"Black Han Sans";font-weight:400;font-size:23px;display:block;position:relative;z-index:2}
+.cat span{font-size:12px;background:#fff;border:2px solid var(--ink);border-radius:99px;padding:2px 9px;display:inline-block;margin-top:6px;position:relative;z-index:2}
+.cat img{position:absolute}
+.cat.wide{grid-column:1/3;height:128px}
+.cat:active{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+.view{padding:12px 16px 0}
+.back{font-size:13px;color:#555;text-decoration:none;display:inline-block;padding:4px 0}
+.vt{font-family:"Black Han Sans";font-size:24px;margin:6px 0 14px}.vt small{font-family:Jua;font-size:13px;color:#888;margin-left:4px}
+.g{display:grid;grid-template-columns:1fr 1fr;gap:12px 10px}
+.c{background:#fff;border-radius:14px;padding:12px 10px 10px;box-shadow:0 3px 10px #00000014;display:flex;flex-direction:column;align-items:center;text-align:center;color:inherit;text-decoration:none;scroll-margin-top:20px}
+.pol{background:#fff;padding:4px 4px 13px;box-shadow:0 2px 6px #0002;position:relative;margin-bottom:9px}.pol img{width:84px;height:84px;object-fit:cover;display:block}
+.pol .em{width:84px;height:84px;display:grid;place-items:center;font-size:36px;background:#FFF1A8}
+.pol:after{content:"♡";position:absolute;bottom:0;left:0;right:0;text-align:center;font-size:9px;color:#ff6f9c}
+.c h3{font-weight:400;font-size:11.5px;line-height:1.3;margin:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:30px}
+.pr{display:flex;align-items:center;justify-content:center;gap:4px;margin-top:4px;flex-wrap:wrap}.pr b{font-weight:400;font-size:13px}.pr s{font-size:9.5px;color:#aaa}
+.pick .pr{justify-content:flex-start}.pick .pr b{font-size:16px;color:var(--pink)}
+.tag{font-size:9px;border-radius:99px;padding:1px 6px;background:var(--yellow)}.tag.hot{background:#ff3b5c;color:#fff}
+.mom{font-family:Gaegu,cursive;font-weight:700;font-size:12px;line-height:1.25;color:#888;margin-top:4px}
+.c .mom{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.c.closed{filter:grayscale(.8);opacity:.6}
+.c.hit{animation:hit 1.2s ease 2}@keyframes hit{50%{box-shadow:0 0 0 4px var(--pink)}}
+.empty{border:3px dashed #ccc;background:#fff;text-align:center;padding:20px;font-size:14px;border-radius:14px;color:#777;grid-column:1/3}
+.end{text-align:center;margin:30px 16px 0;font-family:"Black Han Sans";font-size:20px}
+.end small{display:block;font-family:Jua;font-size:12px;color:#555;margin-top:4px}
+.disc{font-size:10px;color:#999;margin-top:12px;line-height:1.6;font-family:Jua}
 </style>
 </head>
 <body>
 <div class="w">
 <p class="topnote">이 페이지에는 쿠팡·네이버·슬릿 제휴 링크가 있어 구매 시 수수료를 받을 수 있어요.</p>
+<div id="home">
 <header class="hd">
  <div class="top"><span class="ep">EP.2 푸루의 검수 일지</span><a href="https://www.instagram.com/puruland_/" target="_blank" rel="noopener"><img src="%EA%B7%80%EC%97%AC%EC%9A%B4%20%ED%91%B8%EB%A3%A8%EB%A7%98%20%EC%95%84%EA%B8%B0%20%EC%97%84%EC%A7%80%EC%B2%99%20%EB%A1%9C%EA%B3%A0.png" alt="purumom"></a></div>
  <h1>푸루맘 상점</h1><div class="sub">푸루가 발견하고, 검수하고, 합격시켰어요</div>
@@ -78,17 +87,28 @@ a.card:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
  </div>
  <div class="faces">오늘의 심사위원 표정 <span class="face f-laugh"></span><span class="face f-cry"></span><span class="face f-giggle"></span><span class="face f-eat"></span><span class="face f-sleep"></span></div>
 </header>
-<div class="bar"><label class="search">🔍<input id="q" type="search" placeholder="상품 이름으로 찾기"></label><div class="chips" id="chips"></div></div>
-<main id="list"></main>
-<div class="end">다음 화에 계속…<small>새 에피소드는 인스타 @puruland_ 에서 제일 먼저!</small><div class="note" id="disc"></div></div>
+<div id="pick" style="margin-top:22px"></div>
+<div id="deals"></div>
+<div class="sec"><span class="stamp" style="background:var(--yellow)">SHOP</span>카테고리별로 보기</div>
+<div class="cats" id="cats"></div>
+</div>
+<div id="view" class="view" hidden></div>
+<div class="end">다음 화에 계속…<small>새 에피소드는 인스타 @puruland_ 에서 제일 먼저!</small>
+<div class="disc">이 페이지는 쿠팡 인플루언서, 네이버 브랜드커넥트, 아임웹 슬릿 활동의 일환으로, 구매 시 이에 따른 일정액의 수수료를 제공받습니다.</div></div>
 </div>
 <script src="products.js"></script>
 <script>
 (function(){
   var P = (window.PRODUCTS || []).slice();
+  var CATS = [
+    {k:'일상템', bg:'#FFE3EC', img:'img/cat-daily.svg', st:'right:6px;bottom:8px;width:104px'},
+    {k:'패션템', bg:'#E3F1FF', img:'img/cat-fashion.svg', st:'right:8px;bottom:-6px;height:96px'},
+    {k:'인테리어템', bg:'#E6F7E1', img:'img/cat-interior.svg', st:'right:8px;bottom:4px;height:112px', wide:1},
+    {k:'주방템', bg:'#FFF1C9', img:'img/cat-kitchen.svg', st:'right:8px;bottom:6px;width:104px'},
+    {k:'이유식템', bg:'#F1E6FF', img:'img/cat-babyfood.svg', st:'right:12px;bottom:-14px;height:104px;transform:rotate(8deg)'}
+  ];
   var today = new Date(); today.setHours(0,0,0,0);
-  function day(s){ return new Date(s + 'T00:00:00'); }
-  function diff(s){ return Math.round((day(s) - today) / 864e5); }
+  function diff(s){ return Math.round((new Date(s + 'T00:00:00') - today) / 864e5); }
   function state(p){
     if (p.type !== '공구') return 'pick';
     if (p.closed || (p.end && diff(p.end) < 0)) return 'closed';
@@ -96,76 +116,58 @@ a.card:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
     return 'open';
   }
   function esc(t){ return String(t == null ? '' : t).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
-  var DISC = {
-    coupang: {name: '쿠팡', short: '쿠팡 인플루언서 링크 · 수수료를 받아요', full: '이 포스팅은 쿠팡 인플루언서 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.'},
-    naver: {name: '네이버', short: '네이버 브랜드커넥트 링크 · 수수료를 받아요', full: '※이 포스팅에 있는 일부 상품은 네이버 브랜드커넥트(쇼핑커넥트) 활동의 일환으로, 판매 발생 시 수수료를 제공받습니다.'},
-    slit: {name: '슬릿', short: '슬릿 제휴 링크 · 수수료를 받아요', full: '이 포스팅은 아임웹 슬릿(Slit) 제휴 활동의 일환으로, 구매 시 일정액의 수수료를 제공받습니다.'}
-  };
-  function nar(p){
-    var s = state(p), bits = [];
-    if (s === 'open') { if (p.end) { var m = diff(p.end); bits.push(m <= 0 ? '오늘 마감!' : m === 1 ? '내일 마감!' : '마감 D-' + m); } else bits.push('공구 진행 중'); }
-    else if (s === 'soon') { var n = diff(p.start); bits.push('오픈 ' + (n <= 0 ? '오늘' : 'D-' + n)); }
-    else if (s === 'closed') bits.push('마감');
-    if (p.category) bits.push(p.category);
-    if (DISC[p.partner]) bits.push(DISC[p.partner].name);
-    var hot = s === 'open' && p.end && diff(p.end) <= 1;
-    return '<span class="nar' + (hot ? ' hot' : '') + '">' + esc(bits.join(' · ')) + '</span>';
-  }
-  function card(p){
+  function badge(p){
     var s = state(p);
-    var ph = p.img ? '<img src="' + esc(p.img) + '" alt="" loading="lazy" onerror="this.parentNode.textContent=\'' + esc(p.emoji || '🎁') + '\'">' : esc(p.emoji || '🎁');
-    var go = s === 'open' ? '공구 참여하기 ▶' : s === 'soon' ? (p.start.slice(5).replace('-', '/') + ' 오픈 예정') : s === 'closed' ? '마감됐어요' : '보러 가기 ▶';
-    var price = (p.sale ? '<b>' + esc(p.sale) + '</b>' : '') + (p.price ? '<s>' + esc(p.price) + '</s>' : '');
-    var href = (s === 'open' || s === 'pick') ? esc(p.link) : '#' + esc(p.id);
-    var ext = (s === 'open' || s === 'pick') ? ' target="_blank" rel="noopener"' : '';
-    return '<a class="card' + (s === 'closed' ? ' closed' : '') + '" id="' + esc(p.id) + '" href="' + href + '"' + ext + '>' +
-      (s === 'pick' ? '<span class="face f-laugh stk"></span><span class="stk2">푸루 합격!</span>' : '') + '<div class="ph">' + ph + '</div><div class="in">' + nar(p) + '<h3>' + esc(p.name) + '</h3>' +
-      (price ? '<div class="pr">' + price + '</div>' : '') + (p.note ? '<div class="say">' + esc(p.note) + '</div>' : '') +
-      '<span class="go">' + go + '</span>' + (DISC[p.partner] ? '<span class="ad">' + DISC[p.partner].short + '</span>' : '') + '</div></a>';
+    if (s === 'open' && p.end){ var m = diff(p.end); return '<span class="tag hot">' + (m <= 0 ? '오늘 마감' : 'D-' + m) + '</span>'; }
+    if (s === 'soon'){ return '<span class="tag">' + esc(p.start.slice(5).replace('-', '/')) + ' 오픈</span>'; }
+    if (s === 'closed') return '<span class="tag">마감</span>';
+    return p.tag ? '<span class="tag">' + esc(p.tag) + '</span>' : '';
   }
-  var used = {}; P.forEach(function(p){ if (DISC[p.partner]) used[p.partner] = 1; });
-  document.getElementById('disc').innerHTML = Object.keys(used).map(function(k){ return '<p>' + DISC[k].full + '</p>'; }).join('');
-  var cats = [];
-  P.forEach(function(p){ if (p.category && cats.indexOf(p.category) < 0) cats.push(p.category); });
-  var chipList = ['전체', '🔥 공구', '💛 추천템'].concat(cats);
-  var cur = '전체';
-  var chipsEl = document.getElementById('chips');
-  chipsEl.innerHTML = chipList.map(function(c, i){ return '<button' + (i === 0 ? ' class="on"' : '') + '>' + esc(c) + '</button>'; }).join('');
-  function render(){
-    var q = document.getElementById('q').value.trim().toLowerCase();
-    var items = P.filter(function(p){
-      if (cur === '🔥 공구' && p.type !== '공구') return false;
-      if (cur === '💛 추천템' && p.type === '공구') return false;
-      if (cats.indexOf(cur) >= 0 && p.category !== cur) return false;
-      if (q && (p.name + ' ' + (p.note || '') + ' ' + (p.category || '')).toLowerCase().indexOf(q) < 0) return false;
-      return true;
-    });
-    var open = items.filter(function(p){ return state(p) === 'open'; }).sort(function(a,b){ return (a.end || '9999').localeCompare(b.end || '9999'); });
-    var soon = items.filter(function(p){ return state(p) === 'soon'; }).sort(function(a,b){ return a.start.localeCompare(b.start); });
-    var pick = items.filter(function(p){ return state(p) === 'pick'; });
-    var closed = items.filter(function(p){ return state(p) === 'closed'; });
-    var h = '';
-    if (open.length || cur === '전체' || cur === '🔥 공구') h += '<div class="sec"><span class="stamp" style="background:#FF6FA3;color:#fff">NOW</span>진행 중인 공구</div>' + (open.length ? open.map(card).join('') : '<div class="empty">다음 화에 새 공구가 찾아와요! 🧸</div>');
-    if (soon.length) h += '<div class="sec"><span class="stamp" style="background:#FFE14D">SOON</span>오픈 예정 공구</div>' + soon.map(card).join('');
-    if (pick.length) h += '<div class="sec"><span class="stamp" style="background:#222;color:#FFE14D">PASS</span>푸루 합격템</div>' + pick.map(card).join('');
-    if (closed.length) h += '<div class="sec"><span class="stamp" style="background:#ccc">END</span>지난 에피소드</div>' + closed.map(card).join('');
-    if (!items.length) h = '<div class="empty" style="margin-top:20px">찾는 상품이 없어요 🥲</div>';
-    document.getElementById('list').innerHTML = h;
+  function price(p){
+    return '<div class="pr">' + badge(p) + '<b>' + esc(p.sale || '가격 보기') + '</b>' + (p.price ? '<s>' + esc(p.price) + '</s>' : '') + '</div>';
   }
-  chipsEl.addEventListener('click', function(e){
-    var b = e.target.closest('button'); if (!b) return;
-    cur = b.textContent; [].forEach.call(chipsEl.children, function(x){ x.classList.toggle('on', x === b); }); render();
-  });
-  document.getElementById('q').addEventListener('input', render);
-  render();
-  function jump(){
-    var id = decodeURIComponent(location.hash.slice(1)); if (!id) return;
-    var el = document.getElementById(id);
-    if (!el) { cur = '전체'; document.getElementById('q').value = ''; render(); el = document.getElementById(id); }
-    if (!el) return;
-    setTimeout(function(){ el.scrollIntoView({behavior: 'smooth', block: 'start'}); el.classList.remove('hit'); void el.offsetWidth; el.classList.add('hit'); }, 250);
+  function photo(p){
+    return p.img ? '<img src="' + esc(p.img) + '" alt="" loading="lazy">' : '<div class="em">' + esc(p.emoji || '🎁') + '</div>';
   }
-  window.addEventListener('hashchange', jump); jump();
+  function href(p){ var s = state(p); return (s === 'pick' || s === 'open') ? esc(p.link) : '#' + esc(p.id); }
+  var rot = [-5, 4, -3, 5, -4, 3];
+  function card(p, i){
+    var s = state(p), ext = (s === 'pick' || s === 'open') ? ' target="_blank" rel="noopener"' : '';
+    return '<a class="c' + (s === 'closed' ? ' closed' : '') + '" id="' + esc(p.id) + '" href="' + href(p) + '"' + ext + '>' +
+      '<div class="pol" style="transform:rotate(' + rot[i % rot.length] + 'deg)">' + photo(p) + '</div>' +
+      '<h3>' + esc(p.name) + '</h3>' + price(p) + (p.mom ? '<div class="mom">“' + esc(p.mom) + '”</div>' : '') + '</a>';
+  }
+  // PICK
+  var pk = P.filter(function(p){ return p.pick; })[0] || P[0];
+  if (pk) document.getElementById('pick').innerHTML = '<a class="pick" href="' + href(pk) + '" target="_blank" rel="noopener"><div class="lab">PURU\'S PICK <small>이번 주 푸루 원픽</small></div><div class="body"><div class="ph">' + photo(pk) + '</div><div><h3>' + esc(pk.name) + '</h3>' + price(pk) + (pk.mom ? '<div class="mom">“' + esc(pk.mom) + '”</div>' : '') + '</div></div></a>';
+  // 진행 중인 공구
+  var deals = P.filter(function(p){ var s = state(p); return s === 'open' || s === 'soon'; });
+  if (deals.length) document.getElementById('deals').innerHTML = '<div class="sec"><span class="stamp" style="background:#ff3b5c;color:#fff">NOW</span>진행 중인 공구</div><div class="view" style="padding-top:0"><div class="g">' + deals.map(card).join('') + '</div></div>';
+  // 카테고리 타일
+  document.getElementById('cats').innerHTML = CATS.map(function(c){
+    var n = P.filter(function(p){ return p.category === c.k; }).length;
+    return '<a class="cat' + (c.wide ? ' wide' : '') + '" href="#c=' + encodeURIComponent(c.k) + '" style="background:' + c.bg + '"><b>' + c.k + '</b><span>' + (n ? n + '개' : '준비 중') + '</span><img src="' + c.img + '" alt="" style="' + c.st + '"></a>';
+  }).join('');
+  var home = document.getElementById('home'), view = document.getElementById('view');
+  function showCat(k, focus){
+    var items = P.filter(function(p){ return p.category === k; });
+    items.sort(function(a, b){ return (state(a) === 'closed') - (state(b) === 'closed'); });
+    view.innerHTML = '<a class="back" href="#">← 전체 카테고리</a><div class="vt">' + esc(k) + '<small>' + items.length + '개</small></div><div class="g">' +
+      (items.length ? items.map(card).join('') : '<div class="empty">곧 새 아이템이 찾아와요! 🧸</div>') + '</div>';
+    home.hidden = true; view.hidden = false;
+    if (focus){
+      var el = document.getElementById(focus);
+      if (el) setTimeout(function(){ el.scrollIntoView({behavior: 'smooth', block: 'center'}); el.classList.add('hit'); }, 200);
+    } else window.scrollTo(0, 0);
+  }
+  function route(){
+    var h = decodeURIComponent(location.hash.slice(1));
+    if (h.indexOf('c=') === 0) return showCat(h.slice(2));
+    var p = h && P.filter(function(x){ return x.id === h; })[0];
+    if (p && p.category) return showCat(p.category, p.id);
+    view.hidden = true; home.hidden = false;
+  }
+  window.addEventListener('hashchange', route); route();
 })();
 </script>
 </body>
