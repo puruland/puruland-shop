@@ -60,7 +60,9 @@ a.card:active{transform:scale(.98)}
 footer{text-align:center;color:var(--mute);font-size:13px;margin-top:30px;line-height:1.7}
 footer img{height:110px;display:block;margin:0 auto 6px}
 footer a{color:var(--pink);font-family:Jua;text-decoration:none;font-size:15px}
-.note{font-size:11px;color:#b8a796;margin-top:10px}
+.note{font-size:11px;color:#a8988a;margin-top:12px;line-height:1.5}.note p{margin:4px 0}
+.ad{display:block;font-size:10.5px;opacity:.7;margin-top:6px}
+.topnote{text-align:center;font-size:11px;color:#a8988a;margin:10px 0 0}
 </style>
 </head>
 <body>
@@ -79,12 +81,13 @@ footer a{color:var(--pink);font-family:Jua;text-decoration:none;font-size:15px}
     <label class="search">🔍<input id="q" type="search" placeholder="찾는 육아템이 있나요?"></label>
     <div class="chips" id="chips"></div>
   </div>
+  <p class="topnote">이 페이지에는 쿠팡·네이버 제휴 링크가 있어 구매 시 수수료를 받을 수 있어요.</p>
   <main id="list"></main>
   <footer>
     <img src="puru_jacket.png" alt="">
     새 공구 소식은 인스타에서 제일 먼저!<br>
     <a href="https://www.instagram.com/puruland_/" target="_blank" rel="noopener">@puruland_</a>
-    <div class="note">일부 링크는 제휴 링크로, 구매 시 일정 수수료를 받을 수 있어요.</div>
+    <div class="note" id="disc"></div>
   </footer>
 </div>
 <script src="products.js"></script>
@@ -112,7 +115,7 @@ footer a{color:var(--pink);font-family:Jua;text-decoration:none;font-size:15px}
   }
   function card(p){
     var s = state(p);
-    var ph = p.img ? '<img src="' + esc(p.img) + '" alt="" loading="lazy">' : esc(p.emoji || '🎁');
+    var ph = p.img ? '<img src="' + esc(p.img) + '" alt="" loading="lazy" onerror="this.parentNode.textContent=\'' + esc(p.emoji || '🎁') + '\'">' : esc(p.emoji || '🎁');
     var go = s === 'open' ? '공구 참여하기' : s === 'soon' ? (p.start.slice(5).replace('-', '/') + ' 오픈 예정') : s === 'closed' ? '마감됐어요' : '보러 가기';
     var price = (p.sale ? '<b>' + esc(p.sale) + '</b>' : '') + (p.price ? '<s>' + esc(p.price) + '</s>' : '');
     var href = (s === 'open' || s === 'pick') ? esc(p.link) : '#' + esc(p.id);
@@ -121,8 +124,15 @@ footer a{color:var(--pink);font-family:Jua;text-decoration:none;font-size:15px}
       '<div class="ph">' + ph + '</div><div class="in"><div class="bd">' + badge(p) +
       (p.type === '공구' && p.category ? '<span class="tg">' + esc(p.category) + '</span>' : '') + '</div>' +
       '<h3>' + esc(p.name) + '</h3>' + (price ? '<div class="pr">' + price + '</div>' : '') +
-      (p.note ? '<small>' + esc(p.note) + '</small>' : '') + '<span class="go">' + go + '</span></div></a>';
+      (p.note ? '<small>' + esc(p.note) + '</small>' : '') + '<span class="go">' + go + '</span>' +
+      (DISC[p.partner] ? '<span class="ad">' + DISC[p.partner].short + '</span>' : '') + '</div></a>';
   }
+  var DISC = {
+    coupang: {short: '쿠팡 인플루언서 링크 · 수수료를 받아요', full: '이 포스팅은 쿠팡 인플루언서 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.'},
+    naver: {short: '네이버 브랜드커넥트 링크 · 수수료를 받아요', full: '※이 포스팅에 있는 일부 상품은 네이버 브랜드커넥트(쇼핑커넥트) 활동의 일환으로, 판매 발생 시 수수료를 제공받습니다.'}
+  };
+  var used = {}; P.forEach(function(p){ if (DISC[p.partner]) used[p.partner] = 1; });
+  document.getElementById('disc').innerHTML = Object.keys(used).map(function(k){ return '<p>' + DISC[k].full + '</p>'; }).join('');
   var cats = [];
   P.forEach(function(p){ if (p.category && cats.indexOf(p.category) < 0) cats.push(p.category); });
   var chipList = ['전체', '🔥 공구', '💛 추천템'].concat(cats);
