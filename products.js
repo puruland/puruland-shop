@@ -13,6 +13,32 @@
 
 window.PRODUCTS = [
   {
+    id: "cheese-couple-pajama",
+    type: "추천템",
+    partner: "slit",
+    category: "아기옷",
+    name: "치즈실내복 꿀잼커플실내복 낙낙핏",
+    note: "알록달록 커플 실내복, 낙낙한 핏",
+    sale: "팔로워 혜택가 16,900원",
+    link: "https://slit.to/s/u5zgrh",
+    img: "",
+    emoji: "👕",
+    color: "peach"
+  },
+  {
+    id: "cheese-bamboo-pajama",
+    type: "추천템",
+    partner: "slit",
+    category: "아기옷",
+    name: "치즈실내복 [26 봄가을] 포인트 밤부 실내복 낙낙핏",
+    note: "봄가을에 입히는 밤부 실내복, 낙낙한 핏",
+    sale: "16,900원",
+    link: "https://slit.to/s/eu8m8h",
+    img: "",
+    emoji: "👕",
+    color: "mint"
+  },
+  {
     id: "cheese-disney-pajama",
     type: "추천템",
     partner: "slit",
