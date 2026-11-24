@@ -40,7 +40,7 @@ h1{font-family:"Black Han Sans";font-weight:400;font-size:44px;background:#fff;b
 .chips{display:flex;gap:6px;margin-top:8px;overflow:auto;scrollbar-width:none}.chips::-webkit-scrollbar{display:none}
 .chips button{flex:none;border:2px solid var(--ink);background:#fff;padding:5px 12px;font:inherit;font-size:14px;border-radius:99px;color:var(--ink);cursor:pointer}.chips button.on{background:var(--ink);color:var(--yellow)}
 main{padding:0 16px}
-.sec{font-family:"Black Han Sans";font-size:22px;margin:22px 0 10px;display:flex;align-items:center;gap:8px}.sec .face{width:40px;height:40px}
+.sec{font-family:"Black Han Sans";font-size:22px;margin:22px 0 10px;display:flex;align-items:center;gap:8px}.sec .stamp{flex:none;font-family:"Black Han Sans";font-size:13px;padding:5px 8px;border:2.5px solid var(--ink);border-radius:8px;transform:rotate(-6deg);box-shadow:2px 2px 0 var(--ink)}
 .card{display:grid;grid-template-columns:112px 1fr;gap:12px;border:3px solid var(--ink);background:#fff;margin-bottom:16px;box-shadow:4px 4px 0 var(--ink);border-radius:14px;padding:12px;position:relative}
 a.card{text-decoration:none;color:inherit;scroll-margin-top:130px}
 a.card:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
@@ -144,10 +144,10 @@ a.card:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
     var pick = items.filter(function(p){ return state(p) === 'pick'; });
     var closed = items.filter(function(p){ return state(p) === 'closed'; });
     var h = '';
-    if (open.length || cur === '전체' || cur === '🔥 공구') h += '<div class="sec"><span class="face f-wow"></span>진행 중인 공구</div>' + (open.length ? open.map(card).join('') : '<div class="empty">다음 화에 새 공구가 찾아와요! 🧸</div>');
-    if (soon.length) h += '<div class="sec"><span class="face f-curious"></span>오픈 예정 공구</div>' + soon.map(card).join('');
-    if (pick.length) h += '<div class="sec"><span class="face f-clap"></span>푸루 합격템</div>' + pick.map(card).join('');
-    if (closed.length) h += '<div class="sec"><span class="face f-sleep"></span>지난 에피소드</div>' + closed.map(card).join('');
+    if (open.length || cur === '전체' || cur === '🔥 공구') h += '<div class="sec"><span class="stamp" style="background:#FF6FA3;color:#fff">NOW</span>진행 중인 공구</div>' + (open.length ? open.map(card).join('') : '<div class="empty">다음 화에 새 공구가 찾아와요! 🧸</div>');
+    if (soon.length) h += '<div class="sec"><span class="stamp" style="background:#FFE14D">SOON</span>오픈 예정 공구</div>' + soon.map(card).join('');
+    if (pick.length) h += '<div class="sec"><span class="stamp" style="background:#222;color:#FFE14D">PASS</span>푸루 합격템</div>' + pick.map(card).join('');
+    if (closed.length) h += '<div class="sec"><span class="stamp" style="background:#ccc">END</span>지난 에피소드</div>' + closed.map(card).join('');
     if (!items.length) h = '<div class="empty" style="margin-top:20px">찾는 상품이 없어요 🥲</div>';
     document.getElementById('list').innerHTML = h;
   }
