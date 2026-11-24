@@ -46,7 +46,7 @@ window.PRODUCTS = [
     category: "아기옷",
     name: "치즈실내복 꿀잼커플실내복 낙낙핏",
     note: "알록달록 커플 실내복, 낙낙한 핏",
-    sale: "팔로워 혜택가 16,900원",
+    sale: "할인가 16,900원",
     link: "https://slit.to/s/u5zgrh",
     img: "img/cheese-couple.svg",
     emoji: "👕",
