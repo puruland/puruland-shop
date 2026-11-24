@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>푸루맘 상점</title>
+<meta name="description" content="@puruland_ 푸루맘이 푸루랑 직접 써본 공구 & 추천템 모음">
+<meta property="og:title" content="푸루맘 상점 🧸">
+<meta property="og:description" content="푸루랑 직접 써본 것만 모았어요 · 공구 & 추천템">
+<meta property="og:image" content="puru_up.png">
+<link rel="icon" href="profile.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Gowun+Dodum&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fdf4ea;--ink:#5c4033;--mute:#9b8778;--line:#f2e3d1;--pink:#ff8fa3;--mintd:#7cc4a4;
+--peach:#ffd6c4;--mint:#c8ecda;--sky:#cce2fc;--yellow:#ffeca8;--lav:#e2d6fa;--red:#e5484d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Gowun Dodum',sans-serif;-webkit-font-smoothing:antialiased}
+.w{max-width:480px;margin:0 auto;padding:0 16px 48px}
+.hero{position:relative;height:260px;background:#fff6ec;border-radius:0 0 36px 36px;margin:0 -16px;overflow:hidden;
+background-image:radial-gradient(var(--peach) 5px,transparent 6px),radial-gradient(var(--mint) 4px,transparent 5px),radial-gradient(var(--sky) 5px,transparent 6px),radial-gradient(var(--yellow) 4px,transparent 5px);
+background-size:110px 120px,80px 100px,140px 90px,95px 130px;background-position:10px 20px,50px 60px,90px 30px,30px 90px}
+.bun{display:flex;justify-content:space-between;padding:0 8px}
+.bun i{border-left:15px solid transparent;border-right:15px solid transparent;border-top:26px solid var(--peach)}
+.bun i:nth-child(5n+2){border-top-color:var(--mint)}.bun i:nth-child(5n+3){border-top-color:var(--sky)}.bun i:nth-child(5n+4){border-top-color:var(--yellow)}.bun i:nth-child(5n){border-top-color:var(--lav)}
+.hero .p{position:absolute;height:200px;right:2px;bottom:-6px;transform:rotate(5deg)}
+.hero .q{position:absolute;height:128px;left:4px;bottom:4px;transform:rotate(-6deg)}
+.t{position:absolute;left:0;right:0;top:66px;text-align:center}
+.t a.h{display:inline-block;background:var(--pink);color:#fff;font-family:Jua;font-size:15px;padding:4px 14px;border-radius:14px;text-decoration:none}
+.t h1{font-family:Jua;font-weight:400;font-size:40px;margin:6px 0 0;text-shadow:3px 3px #fff,-3px -3px #fff,3px -3px #fff,-3px 3px #fff,0 3px #fff,3px 0 #fff}
+.t p{margin:2px 0 0;font-size:13px;color:var(--mute);text-shadow:0 0 6px #fff,0 0 6px #fff}
+.bar{position:sticky;top:0;z-index:5;background:rgba(253,244,234,.95);backdrop-filter:blur(6px);margin:0 -16px;padding:12px 16px 8px}
+.search{display:flex;align-items:center;gap:8px;background:#fff;border:2px solid var(--line);border-radius:18px;padding:8px 14px}
+.search input{border:0;outline:0;flex:1;font:inherit;font-size:15px;color:var(--ink);background:transparent;min-width:0}
+.chips{display:flex;gap:8px;margin-top:10px;overflow-x:auto;scrollbar-width:none}.chips::-webkit-scrollbar{display:none}
+.chips button{flex:none;font-family:Jua;font-size:14px;background:#fff;color:var(--ink);border:2px solid var(--line);border-radius:18px;padding:6px 15px;cursor:pointer}
+.chips button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.lbl{display:table;margin:22px auto 12px;background:var(--pink);color:#fff;font-family:Jua;font-size:16px;padding:6px 18px;border-radius:18px}
+.lbl.g{background:var(--mintd)}.lbl.x{background:#c9b8a6}
+a.card{display:flex;gap:14px;border-radius:28px;padding:12px;margin-bottom:12px;align-items:center;text-decoration:none;color:inherit;scroll-margin-top:130px;transition:transform .15s}
+a.card:active{transform:scale(.98)}
+.card.closed{filter:grayscale(.6);opacity:.65}
+.ph{width:100px;height:100px;border-radius:22px;background:#fff;display:grid;place-items:center;font-size:46px;flex:none;overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover}
+.in{flex:1;min-width:0}
+.bd{display:flex;gap:5px;flex-wrap:wrap}
+.tg{font-size:11px;font-family:Jua;padding:2px 9px;border-radius:9px;background:rgba(255,255,255,.8)}
+.tg.hot{background:var(--red);color:#fff}
+.card h3{font-family:Jua;font-weight:400;font-size:17px;line-height:1.3;margin:5px 0 2px}
+.pr{display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+.pr b{font-family:Jua;font-weight:400;font-size:18px;color:#c0503a}.pr s{font-size:12px;color:var(--mute)}
+.card small{display:block;font-size:12px;opacity:.85;margin-top:2px}
+.go{display:inline-flex;align-items:center;gap:4px;margin-top:8px;font-family:Jua;font-size:13px;background:#fff;border-radius:14px;padding:6px 13px}
+.go:before{content:"♥";color:var(--pink)}
+.peach{background:var(--peach)}.mint{background:var(--mint)}.sky{background:var(--sky)}.yellow{background:var(--yellow)}.lav{background:var(--lav)}
+.card.hit{animation:hit 1.4s ease 2}
+@keyframes hit{0%,100%{box-shadow:0 0 0 0 transparent}40%{box-shadow:0 0 0 5px var(--pink)}}
+.empty{text-align:center;color:var(--mute);font-size:14px;background:#fff;border:2px dashed var(--line);border-radius:22px;padding:22px}
+footer{text-align:center;color:var(--mute);font-size:13px;margin-top:30px;line-height:1.7}
+footer img{height:110px;display:block;margin:0 auto 6px}
+footer a{color:var(--pink);font-family:Jua;text-decoration:none;font-size:15px}
+.note{font-size:11px;color:#b8a796;margin-top:10px}
+</style>
+</head>
+<body>
+<div class="w">
+  <div class="hero">
+    <div class="bun"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <img class="q" src="puru_white.png" alt="">
+    <img class="p" src="puru_up.png" alt="">
+    <div class="t">
+      <a class="h" href="https://www.instagram.com/puruland_/" target="_blank" rel="noopener">@puruland_</a>
+      <h1>푸루맘 상점</h1>
+      <p>푸루랑 직접 써본 것만 모았어요</p>
+    </div>
+  </div>
+  <div class="bar">
+    <label class="search">🔍<input id="q" type="search" placeholder="찾는 육아템이 있나요?"></label>
+    <div class="chips" id="chips"></div>
+  </div>
+  <main id="list"></main>
+  <footer>
+    <img src="puru_jacket.png" alt="">
+    새 공구 소식은 인스타에서 제일 먼저!<br>
+    <a href="https://www.instagram.com/puruland_/" target="_blank" rel="noopener">@puruland_</a>
+    <div class="note">일부 링크는 제휴 링크로, 구매 시 일정 수수료를 받을 수 있어요.</div>
+  </footer>
+</div>
+<script src="products.js"></script>
+<script>
+(function(){
+  var P = (window.PRODUCTS || []).slice();
+  var today = new Date(); today.setHours(0,0,0,0);
+  function day(s){ return new Date(s + 'T00:00:00'); }
+  function diff(s){ return Math.round((day(s) - today) / 864e5); }
+  function state(p){
+    if (p.type !== '공구') return 'pick';
+    if (p.closed || (p.end && diff(p.end) < 0)) return 'closed';
+    if (p.start && diff(p.start) > 0) return 'soon';
+    return 'open';
+  }
+  function esc(t){ return String(t == null ? '' : t).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  function badge(p){
+    var s = state(p);
+    if (s === 'pick') return '<span class="tg">' + esc(p.category || '추천템') + '</span>';
+    if (s === 'closed') return '<span class="tg">마감</span>';
+    if (s === 'soon') { var n = diff(p.start); return '<span class="tg">오픈 ' + (n <= 0 ? '오늘' : 'D-' + n) + '</span>'; }
+    if (!p.end) return '<span class="tg">공구 진행 중</span>';
+    var m = diff(p.end);
+    return '<span class="tg' + (m <= 1 ? ' hot' : '') + '">' + (m <= 0 ? '오늘 마감!' : m === 1 ? '내일 마감!' : '마감 D-' + m) + '</span>';
+  }
+  function card(p){
+    var s = state(p);
+    var ph = p.img ? '<img src="' + esc(p.img) + '" alt="" loading="lazy">' : esc(p.emoji || '🎁');
+    var go = s === 'open' ? '공구 참여하기' : s === 'soon' ? (p.start.slice(5).replace('-', '/') + ' 오픈 예정') : s === 'closed' ? '마감됐어요' : '보러 가기';
+    var price = (p.sale ? '<b>' + esc(p.sale) + '</b>' : '') + (p.price ? '<s>' + esc(p.price) + '</s>' : '');
+    var href = (s === 'open' || s === 'pick') ? esc(p.link) : '#' + esc(p.id);
+    var ext = (s === 'open' || s === 'pick') ? ' target="_blank" rel="noopener"' : '';
+    return '<a class="card ' + esc(p.color || 'peach') + (s === 'closed' ? ' closed' : '') + '" id="' + esc(p.id) + '" href="' + href + '"' + ext + '>' +
+      '<div class="ph">' + ph + '</div><div class="in"><div class="bd">' + badge(p) +
+      (p.type === '공구' && p.category ? '<span class="tg">' + esc(p.category) + '</span>' : '') + '</div>' +
+      '<h3>' + esc(p.name) + '</h3>' + (price ? '<div class="pr">' + price + '</div>' : '') +
+      (p.note ? '<small>' + esc(p.note) + '</small>' : '') + '<span class="go">' + go + '</span></div></a>';
+  }
+  var cats = [];
+  P.forEach(function(p){ if (p.category && cats.indexOf(p.category) < 0) cats.push(p.category); });
+  var chipList = ['전체', '🔥 공구', '💛 추천템'].concat(cats);
+  var cur = '전체';
+  var chipsEl = document.getElementById('chips');
+  chipsEl.innerHTML = chipList.map(function(c, i){ return '<button' + (i === 0 ? ' class="on"' : '') + '>' + esc(c) + '</button>'; }).join('');
+  function render(){
+    var q = document.getElementById('q').value.trim().toLowerCase();
+    var items = P.filter(function(p){
+      if (cur === '🔥 공구' && p.type !== '공구') return false;
+      if (cur === '💛 추천템' && p.type === '공구') return false;
+      if (cats.indexOf(cur) >= 0 && p.category !== cur) return false;
+      if (q && (p.name + ' ' + (p.note || '') + ' ' + (p.category || '')).toLowerCase().indexOf(q) < 0) return false;
+      return true;
+    });
+    var open = items.filter(function(p){ return state(p) === 'open'; }).sort(function(a,b){ return (a.end || '9999').localeCompare(b.end || '9999'); });
+    var soon = items.filter(function(p){ return state(p) === 'soon'; }).sort(function(a,b){ return a.start.localeCompare(b.start); });
+    var pick = items.filter(function(p){ return state(p) === 'pick'; });
+    var closed = items.filter(function(p){ return state(p) === 'closed'; });
+    var h = '';
+    if (open.length || cur === '전체' || cur === '🔥 공구') h += '<span class="lbl">🔥 진행 중인 공구</span>' + (open.length ? open.map(card).join('') : '<div class="empty">지금 진행 중인 공구가 없어요.<br>곧 새 공구로 찾아올게요 🧸</div>');
+    if (soon.length) h += '<span class="lbl">⏰ 오픈 예정 공구</span>' + soon.map(card).join('');
+    if (pick.length) h += '<span class="lbl g">💛 푸루맘 추천템</span>' + pick.map(card).join('');
+    if (closed.length) h += '<span class="lbl x">📦 지난 공구</span>' + closed.map(card).join('');
+    if (!items.length) h = '<div class="empty" style="margin-top:20px">찾는 상품이 없어요 🥲</div>';
+    document.getElementById('list').innerHTML = h;
+  }
+  chipsEl.addEventListener('click', function(e){
+    var b = e.target.closest('button'); if (!b) return;
+    cur = b.textContent; [].forEach.call(chipsEl.children, function(x){ x.classList.toggle('on', x === b); }); render();
+  });
+  document.getElementById('q').addEventListener('input', render);
+  render();
+  function jump(){
+    var id = decodeURIComponent(location.hash.slice(1)); if (!id) return;
+    var el = document.getElementById(id);
+    if (!el) { cur = '전체'; document.getElementById('q').value = ''; render(); el = document.getElementById(id); }
+    if (!el) return;
+    setTimeout(function(){ el.scrollIntoView({behavior: 'smooth', block: 'start'}); el.classList.remove('hit'); void el.offsetWidth; el.classList.add('hit'); }, 250);
+  }
+  window.addEventListener('hashchange', jump); jump();
+})();
+</script>
+</body>
+</html>
