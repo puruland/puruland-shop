@@ -27,7 +27,6 @@ h1{font-family:"Black Han Sans";font-weight:400;font-size:44px;background:#fff;b
 .sub{font-size:15px;margin-bottom:12px}
 .strip{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}
 .pn{border:3px solid var(--ink);background:#fff;position:relative;height:170px;overflow:hidden}
-.pn .mom{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;object-position:50% 0;transform:scaleX(-1);background:#DDEFFF}
 .pn .ph{position:absolute;top:0;left:50%;height:100%;width:auto;aspect-ratio:1;transform:translateX(-50%);border:0;border-radius:0}
 .pn .t{position:absolute;left:5px;right:5px;background:#fff;border:2px solid var(--ink);border-radius:12px;font-size:12px;padding:3px 6px;line-height:1.2;text-align:center;z-index:2}
 .pn .n{position:absolute;bottom:0;left:0;right:0;background:var(--ink);color:#fff;font-size:11px;text-align:center;padding:2px;z-index:2}
@@ -63,6 +62,7 @@ a.card:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
 .end{text-align:center;margin:28px 16px 0;font-family:"Black Han Sans";font-size:22px}
 .end small{display:block;font-family:Jua;font-size:13px;color:#555;margin-top:4px}
 .note{font-size:10px;color:#777;margin-top:10px;line-height:1.6;font-family:Jua}.note p{margin:3px 0}
+.pn .t.fnd{top:5px;background:var(--yellow);font-family:"Black Han Sans";font-size:19px}
 </style>
 </head>
 <body>
@@ -70,13 +70,13 @@ a.card:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
 <p class="topnote">이 페이지에는 쿠팡·네이버 제휴 링크가 있어 구매 시 수수료를 받을 수 있어요.</p>
 <header class="hd">
  <div class="top"><span class="ep">EP.2 푸루의 검수 일지</span><a href="https://www.instagram.com/puruland_/" target="_blank" rel="noopener"><img src="%EA%B7%80%EC%97%AC%EC%9A%B4%20%ED%91%B8%EB%A3%A8%EB%A7%98%20%EC%95%84%EA%B8%B0%20%EC%97%84%EC%A7%80%EC%B2%99%20%EB%A1%9C%EA%B3%A0.png" alt="purumom"></a></div>
- <h1>푸루맘 상점</h1><div class="sub">엄마가 고르고, 푸루가 표정으로 심사했어요</div>
+ <h1>푸루맘 상점</h1><div class="sub">푸루가 발견하고, 검수하고, 합격시켰어요</div>
  <div class="strip">
-  <div class="pn"><img class="mom" src="%ED%8C%8C%EB%9E%80%20%EB%8B%88%ED%8A%B8%20%EC%A1%B0%EB%81%BC%EB%A5%BC%20%EC%9E%85%EC%9D%80%20%EC%97%AC%EC%84%B1%20%EC%B4%88%EC%83%81.png" alt="푸루맘"><div class="t" style="bottom:24px">푸루야~ 이거 써볼까?</div><div class="n">푸루맘</div></div>
-  <div class="pn"><span class="face f-curious ph"></span><div class="t" style="top:5px">흐음… 검수 중</div><div class="n">푸루</div></div>
-  <div class="pn win"><div class="t">합격!!</div><span class="face f-clap"></span></div>
+  <div class="pn"><span class="face f-wow ph"></span><div class="t fnd">발견!</div><div class="n">1. 발견</div></div>
+  <div class="pn"><span class="face f-curious ph"></span><div class="t" style="top:5px">흐음… 검수 중</div><div class="n">2. 검수</div></div>
+  <div class="pn win"><div class="t">합격!!</div><span class="face f-clap"></span><div class="n">3. 합격</div></div>
  </div>
- <div class="faces">오늘의 심사위원 표정 <span class="face f-laugh"></span><span class="face f-wow"></span><span class="face f-giggle"></span><span class="face f-eat"></span><span class="face f-sleep"></span></div>
+ <div class="faces">오늘의 심사위원 표정 <span class="face f-laugh"></span><span class="face f-cry"></span><span class="face f-giggle"></span><span class="face f-eat"></span><span class="face f-sleep"></span></div>
 </header>
 <div class="bar"><label class="search">🔍<input id="q" type="search" placeholder="상품 이름으로 찾기"></label><div class="chips" id="chips"></div></div>
 <main id="list"></main>
