@@ -81,19 +81,11 @@ h1{font-family:"Black Han Sans";font-weight:400;font-size:44px;background:#fff;b
 @keyframes tipw{0%,100%{transform:rotate(0)}8%{transform:rotate(-3deg)}16%{transform:rotate(3deg)}24%{transform:rotate(0)}}
 .notice{background:#ff3b5c;color:#fff;border:3px solid var(--ink);border-radius:14px;box-shadow:3px 3px 0 var(--ink);padding:12px 14px;margin-bottom:16px;font-size:14px;line-height:1.5}.notice b{display:block;font-family:"Black Han Sans";font-weight:400;font-size:20px;margin-bottom:4px}
 .pick .tip{font-size:12px}
-.sh{position:fixed;inset:0;background:#0008;z-index:50;display:flex;align-items:flex-end;justify-content:center}.sh[hidden]{display:none}
-.sh .in{background:var(--cream);width:100%;max-width:480px;max-height:88vh;overflow:auto;border-radius:20px 20px 0 0;border:3px solid var(--ink);border-bottom:0;padding:18px 16px 22px}
-.sh h4{font-family:"Black Han Sans";font-weight:400;font-size:21px;margin:0 0 4px}
-.sh .s2{font-size:12.5px;color:#666;margin-bottom:14px}
 .st{background:#fff;border:2.5px solid var(--ink);border-radius:14px;box-shadow:3px 3px 0 var(--ink);padding:10px;margin-bottom:14px}
 .st>b{display:flex;align-items:center;gap:7px;font-weight:400;font-size:14px;line-height:1.3;margin-bottom:8px}
 .st>b i{font-style:normal;font-family:"Black Han Sans";background:var(--pink);color:#fff;border-radius:50%;width:24px;height:24px;display:grid;place-items:center;font-size:13px;flex:none}
 .st .hint{font-size:12px;color:#5a4a3a;background:#FFF1A8;border-radius:8px;padding:5px 8px;margin:-2px 0 8px;line-height:1.35}
 .st img{width:100%;display:block;border-radius:8px;border:1px solid #eee}
-.buybar{position:sticky;bottom:-22px;background:var(--cream);padding:10px 0 4px;margin-top:4px;display:flex;gap:8px}
-.buy{flex:1;display:block;text-align:center;font-family:"Black Han Sans";font-size:17px;background:var(--yellow);color:var(--ink);border:3px solid var(--ink);border-radius:12px;box-shadow:3px 3px 0 var(--ink);padding:11px 8px;text-decoration:none}
-.cl2{flex:none;font-family:Jua;font-size:14px;background:#fff;color:#555;border:2px solid #bbb;border-radius:12px;padding:0 14px;cursor:pointer}
-.cl{display:block;width:100%;font-family:Jua;font-size:15px;background:var(--ink);color:var(--yellow);border:0;border-radius:12px;padding:11px;cursor:pointer}
 .cp{border:1px solid #e3e3e3;border-radius:10px;overflow:hidden;font-family:-apple-system,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;font-size:12.5px;color:#111;background:#fff;padding-bottom:8px}
 .cp-g{margin:6px;border:2.5px solid #9aa3ad;border-radius:10px;padding:8px 10px}
 .cp-pr b{font-size:17px}.cp-pr small{font-size:11px}.cp-pr s{color:#999;font-size:11px;margin-left:4px}
@@ -108,6 +100,10 @@ h1{font-family:"Black Han Sans";font-weight:400;font-size:44px;background:#fff;b
 .cp-tabs{display:flex;border-bottom:1px solid #eee}.cp-tabs span{flex:1;text-align:center;padding:7px 0;color:#333}.cp-tabs .on{color:#1a73e8;border-bottom:2px solid #1a73e8;font-weight:700}
 .cp-r.it{border-top:1px solid #eee;line-height:1.55}.cp-r.it.hl{border:3px solid #FF3B8B}.cp-r.it>span{color:#1a73e8;font-size:20px}
 .cp .bx{border:1px solid #ccc;border-radius:4px;padding:0 4px;color:#333}.cp .cur{color:#e5407a}
+.pp{background:#fff;border:3px solid var(--ink);border-radius:16px;box-shadow:4px 4px 0 var(--ink);padding:12px;display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:center;margin-bottom:12px}
+.pp img{width:96px;height:96px;object-fit:cover;border-radius:10px;display:block}.pp h3{font-weight:400;font-size:14px;line-height:1.3;margin:0}.pp .pr{justify-content:flex-start}.pp .pr b{font-size:17px;color:var(--pink)}
+.buy{display:block;text-align:center;font-family:"Black Han Sans";font-size:18px;background:var(--yellow);color:var(--ink);border:3px solid var(--ink);border-radius:12px;box-shadow:3px 3px 0 var(--ink);padding:12px 8px;text-decoration:none;margin:0 0 16px}
+.gp .st{margin-bottom:14px}
 </style>
 </head>
 <body>
@@ -134,7 +130,7 @@ h1{font-family:"Black Han Sans";font-weight:400;font-size:44px;background:#fff;b
 <a class="contact" href="mailto:vivian9620@naver.com">💌 협업문의 <b>vivian9620@naver.com</b></a>
 <div class="disc">이 페이지는 쿠팡 인플루언서, 네이버 브랜드커넥트, 아임웹 슬릿 활동의 일환으로, 구매 시 이에 따른 일정액의 수수료를 제공받습니다.</div></div>
 </div>
-<div class="sh" id="sh" hidden><div class="in">
+<template id="tpl-seller">
 <div class="notice"><b>🔥 품절 직전 안내</b>현재 너무 인기가 많아서 품절 직전이라<br>아래 방법으로도 구매 가능하시니 안내드립니다.</div>
 <div class="st"><b><i>1</i>상품 페이지에 '품절임박'이나 '품절'이 보이면</b><img src="img/guide-seller-1.svg" alt=""></div>
 <div class="st"><b><i>2</i>가격·배송 정보에서 조금만 내리면 '다른 판매자 상품'이 있어요</b><div class="hint">📍 '선물 포장 신청' 바로 아래! 오른쪽 <u>전체보기 &gt;</u> 를 눌러 주세요</div>
@@ -150,7 +146,7 @@ h1{font-family:"Black Han Sans";font-weight:400;font-size:44px;background:#fff;b
 <div class="cp-r it"><div><small class="bx">새 상품</small> <small class="cur">현재 상품</small><br><b>19,800원</b> <i>🚀로켓</i><br><small>쿠팡(주) · 품절 직전</small></div><span>›</span></div>
 <div class="cp-r it hl"><div><small class="bx">새 상품</small><br><b>19,800원</b> <small>+ 무료배송</small><br><small>다른 판매자</small></div><span>›</span></div>
 <div class="cp-pill">다른 판매자 눌러서 구매! 👆</div></div></div>
-<div class="buybar"><a class="buy" id="shbuy" href="#" target="_blank" rel="noopener">🛒 쿠팡에서 구매하러 가기 ›</a><button class="cl2" id="shx">닫기</button></div></div></div>
+</template>
 <script src="products.js"></script>
 <script>
 (function(){
@@ -184,25 +180,14 @@ h1{font-family:"Black Han Sans";font-weight:400;font-size:44px;background:#fff;b
   function photo(p){
     return p.img ? '<img src="' + esc(p.img) + '" alt="" loading="lazy">' : '<div class="em">' + esc(p.emoji || '🎁') + '</div>';
   }
-  function href(p){ var s = state(p); return (s === 'pick' || s === 'open') ? esc(p.link) : '#' + esc(p.id); }
+  function href(p){ var s = state(p); return p.guide ? '#' + esc(p.id) : (s === 'pick' || s === 'open') ? esc(p.link) : '#' + esc(p.id); }
   var rot = [-5, 4, -3, 5, -4, 3];
   var FACES = ['laugh', 'giggle', 'wow', 'eat', 'curious', 'clap'];
   function say(p, i){ return p.mom ? '<div class="say"><span class="face f-' + (p.face || FACES[(i || 0) % FACES.length]) + '"></span><div class="b">' + esc(p.mom) + '</div></div>' : ''; }
   function tip(p){ return p.guide === 'seller' ? '<span class="tip">🔥 품절 직전!<u>이 방법으로도 살 수 있어요 ›</u></span>' : ''; }
-  var sh = document.getElementById('sh'), shbuy = document.getElementById('shbuy');
-  function openGuide(id){
-    var p = P.filter(function(x){ return x.id === id; })[0];
-    if (!p) return;
-    shbuy.href = p.link; sh.hidden = false; sh.querySelector('.in').scrollTop = 0;
-  }
-  document.addEventListener('click', function(e){
-    var g = e.target.closest('[data-guide]');
-    if (g){ e.preventDefault(); e.stopPropagation(); openGuide(g.getAttribute('data-guide')); }
-    else if (e.target === sh || e.target.id === 'shx'){ sh.hidden = true; }
-  }, true);
   function card(p, i){
-    var s = state(p), ext = (s === 'pick' || s === 'open') ? ' target="_blank" rel="noopener"' : '';
-    return '<a class="c' + (s === 'closed' ? ' closed' : '') + '" id="' + esc(p.id) + '" href="' + href(p) + '"' + ext + (p.guide ? ' data-guide="' + esc(p.id) + '"' : '') + '>' +
+    var s = state(p), ext = (!p.guide && (s === 'pick' || s === 'open')) ? ' target="_blank" rel="noopener"' : '';
+    return '<a class="c' + (s === 'closed' ? ' closed' : '') + '" id="' + esc(p.id) + '" href="' + href(p) + '"' + ext + '>' +
       '<div class="pol" style="transform:rotate(' + rot[i % rot.length] + 'deg)">' + photo(p) + '</div>' +
       '<h3>' + esc(p.name) + '</h3>' + price(p) + tip(p) + say(p, i) + '</a>';
   }
@@ -229,11 +214,19 @@ h1{font-family:"Black Han Sans";font-weight:400;font-size:44px;background:#fff;b
       if (el) setTimeout(function(){ el.scrollIntoView({behavior: 'smooth', block: 'center'}); el.classList.add('hit'); }, 200);
     } else window.scrollTo(0, 0);
   }
+  function showGuide(p){
+    var buy = '<a class="buy" href="' + esc(p.link) + '" target="_blank" rel="noopener">🛒 쿠팡에서 구매하러 가기 ›</a>';
+    view.innerHTML = '<a class="back" href="#c=' + encodeURIComponent(p.category) + '">← ' + esc(p.category) + '</a>' +
+      '<div class="pp">' + photo(p) + '<div><h3>' + esc(p.name) + '</h3>' + price(p) + say(p, 0) + '</div></div>' + buy +
+      '<div class="gp">' + document.getElementById('tpl-' + p.guide).innerHTML + '</div>' + buy;
+    home.hidden = true; view.hidden = false; window.scrollTo(0, 0);
+  }
   function route(){
     var h = decodeURIComponent(location.hash.slice(1));
     if (h.indexOf('c=') === 0) return showCat(h.slice(2));
     var p = h && P.filter(function(x){ return x.id === h; })[0];
-    if (p && p.category){ showCat(p.category, p.id); if (p.guide) setTimeout(function(){ openGuide(p.id); }, 700); return; }
+    if (p && p.guide) return showGuide(p);
+    if (p && p.category) return showCat(p.category, p.id);
     view.hidden = true; home.hidden = false;
   }
   window.addEventListener('hashchange', route); route();
