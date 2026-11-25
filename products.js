@@ -1,6 +1,6 @@
 // 푸루맘 상점 상품 목록 — 새 상품은 Claude에게 "상품 추가해줘" 하면 여기에 들어가요.
 //
-// id       : 인포크링크 주소 끝부분 → https://puruland-shop.netlify.app/#id (누르면 그 카테고리가 열리고 상품으로 이동)
+// id       : 인포크링크 주소 끝부분 → https://puruland.github.io/puruland-shop/#id (누르면 그 카테고리가 열리고 상품으로 이동)
 // type     : "공구"(start/end 날짜 필요) 또는 "추천템"(일반 제휴 링크)
 // partner  : coupang / naver / slit
 // category : 일상템 / 패션템 / 인테리어템 / 주방템 / 이유식템
@@ -8,6 +8,7 @@
 // name     : 상품명    mom : 엄마 말투 한 줄
 // tag      : 작은 뱃지 (예: "17%", "팔로워 전용가")
 // sale     : 가격 (크게)    price : 정가 (줄 그어짐, 진짜 정가가 있을 때만)
+// guide    : "seller" 로 하면 '🔥 품절 직전!' 버튼 + 다른 판매자 구매 가이드가 붙어요
 // link     : 구매 링크    img : 사진 파일    emoji : 사진 없을 때 대신 보일 이모지
 
 window.PRODUCTS = [
@@ -82,6 +83,10 @@ window.PRODUCTS = [
     category: "일상템",
     name: "0~5세 기적의 미술 놀이",
     mom: "하루 10분, 준비물 없이 바로 놀아요",
+    tag: "10%",
+    sale: "19,800원",
+    price: "22,000원",
+    guide: "seller",
     link: "https://link.coupang.com/a/iV8X4ib0Ng",
     img: "book_art.jpg",
     emoji: "🎨"
