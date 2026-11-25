@@ -215,7 +215,7 @@ h1{font-family:"Black Han Sans";font-weight:400;font-size:44px;background:#fff;b
     } else window.scrollTo(0, 0);
   }
   function showGuide(p){
-    var buy = '<a class="buy" href="' + esc(p.link) + '" target="_blank" rel="noopener">🛒 쿠팡에서 구매하러 가기 ›</a>';
+    var buy = '<a class="buy" href="' + esc(p.link) + '" target="_blank" rel="noopener">🛒 창의력 책 UP 구매하러 가기 ›</a>';
     view.innerHTML = '<a class="back" href="#c=' + encodeURIComponent(p.category) + '">← ' + esc(p.category) + '</a>' +
       '<div class="pp">' + photo(p) + '<div><h3>' + esc(p.name) + '</h3>' + price(p) + say(p, 0) + '</div></div>' + buy +
       '<div class="gp">' + document.getElementById('tpl-' + p.guide).innerHTML + '</div>' + buy;
