@@ -71,6 +71,10 @@ h1{font-family:"Black Han Sans";font-weight:400;font-size:44px;background:#fff;b
 .end{text-align:center;margin:30px 16px 0;font-family:"Black Han Sans";font-size:20px}
 .end small{display:block;font-family:Jua;font-size:12px;color:#555;margin-top:4px}
 .disc{font-size:10px;color:#999;margin-top:12px;line-height:1.6;font-family:Jua}
+.say{display:flex;align-items:flex-end;gap:4px;margin-top:6px;text-align:left;width:100%}
+.say .face{width:24px;height:24px;border-width:1.5px}
+.say .b{background:#FFF1A8;border-radius:10px 10px 10px 2px;padding:4px 7px;font-family:Gaegu,cursive;font-weight:700;font-size:11.5px;line-height:1.25;color:#5a4a3a;flex:1;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.pick .say .face{width:30px;height:30px}.pick .say .b{font-size:13px}
 </style>
 </head>
 <body>
@@ -131,15 +135,17 @@ h1{font-family:"Black Han Sans";font-weight:400;font-size:44px;background:#fff;b
   }
   function href(p){ var s = state(p); return (s === 'pick' || s === 'open') ? esc(p.link) : '#' + esc(p.id); }
   var rot = [-5, 4, -3, 5, -4, 3];
+  var FACES = ['laugh', 'giggle', 'wow', 'eat', 'curious', 'clap'];
+  function say(p, i){ return p.mom ? '<div class="say"><span class="face f-' + (p.face || FACES[(i || 0) % FACES.length]) + '"></span><div class="b">' + esc(p.mom) + '</div></div>' : ''; }
   function card(p, i){
     var s = state(p), ext = (s === 'pick' || s === 'open') ? ' target="_blank" rel="noopener"' : '';
     return '<a class="c' + (s === 'closed' ? ' closed' : '') + '" id="' + esc(p.id) + '" href="' + href(p) + '"' + ext + '>' +
       '<div class="pol" style="transform:rotate(' + rot[i % rot.length] + 'deg)">' + photo(p) + '</div>' +
-      '<h3>' + esc(p.name) + '</h3>' + price(p) + (p.mom ? '<div class="mom">“' + esc(p.mom) + '”</div>' : '') + '</a>';
+      '<h3>' + esc(p.name) + '</h3>' + price(p) + say(p, i) + '</a>';
   }
   // PICK
   var pk = P.filter(function(p){ return p.pick; })[0] || P[0];
-  if (pk) document.getElementById('pick').innerHTML = '<a class="pick" href="' + href(pk) + '" target="_blank" rel="noopener"><div class="lab">PURU\'S PICK <small>이번 주 푸루 원픽</small></div><div class="body"><div class="ph">' + photo(pk) + '</div><div><h3>' + esc(pk.name) + '</h3>' + price(pk) + (pk.mom ? '<div class="mom">“' + esc(pk.mom) + '”</div>' : '') + '</div></div></a>';
+  if (pk) document.getElementById('pick').innerHTML = '<a class="pick" href="' + href(pk) + '" target="_blank" rel="noopener"><div class="lab">PURU\'S PICK <small>이번 주 푸루 원픽</small></div><div class="body"><div class="ph">' + photo(pk) + '</div><div><h3>' + esc(pk.name) + '</h3>' + price(pk) + say(pk, 0) + '</div></div></a>';
   // 진행 중인 공구
   var deals = P.filter(function(p){ var s = state(p); return s === 'open' || s === 'soon'; });
   if (deals.length) document.getElementById('deals').innerHTML = '<div class="sec"><span class="stamp" style="background:#ff3b5c;color:#fff">NOW</span>진행 중인 공구</div><div class="view" style="padding-top:0"><div class="g">' + deals.map(card).join('') + '</div></div>';
