@@ -214,5 +214,19 @@ window.PRODUCTS = [
     link: "https://naver.me/FM9LL3eW",
     img: "img/play-watermat.svg",
     emoji: "🐠"
+  },
+  {
+    id: "jolly-jumper-rental",
+    type: "추천템",
+    partner: "naver",
+    category: "가성비 놀이템",
+    name: "리틀베이비 졸리점퍼 오리지널 스탠드 아기점퍼루 대여 (60일)",
+    mom: "잠깐 쓰는 점퍼루는 사지 말고 빌려요, 콩콩 뛰는 거 보면 웃음 나요",
+    tag: "60일 대여",
+    sale: "23,000원",
+    price: "48,000원",
+    link: "https://smartstore.naver.com/littlebaby/products/4802715691",
+    img: "img/play-jumper.svg",
+    emoji: "🦘"
   }
 ];
