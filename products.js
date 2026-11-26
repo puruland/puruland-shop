@@ -200,5 +200,19 @@ window.PRODUCTS = [
     link: "https://naver.me/xgXll8cq",
     img: "img/play-rattle.svg",
     emoji: "🔔"
+  },
+  {
+    id: "bebebae-water-mat",
+    type: "추천템",
+    partner: "naver",
+    category: "가성비 놀이템",
+    name: "베이비배 아기 워터매트 촉감놀이 터미타임 매트",
+    mom: "터미타임 싫어하던 아기도 물고기 잡느라 고개를 번쩍 들어요",
+    tag: "31%",
+    sale: "8,900원",
+    price: "12,900원",
+    link: "https://naver.me/FM9LL3eW",
+    img: "img/play-watermat.svg",
+    emoji: "🐠"
   }
 ];
