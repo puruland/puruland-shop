@@ -225,7 +225,7 @@ window.PRODUCTS = [
     tag: "60일 대여",
     sale: "23,000원",
     price: "48,000원",
-    link: "https://smartstore.naver.com/littlebaby/products/4802715691",
+    link: "https://naver.me/xRgrfoz2",
     img: "img/play-jumper.svg",
     emoji: "🦘"
   }
