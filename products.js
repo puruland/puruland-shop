@@ -13,6 +13,21 @@
 
 window.PRODUCTS = [
   {
+    id: "rosy-organic-puffs",
+    type: "추천템",
+    partner: "naver",
+    category: "이유식템",
+    pick: true,
+    name: "로지오가닉 유기농 아기쌀과자 야채 과일 퍼프 8봉",
+    mom: "입에서 사르르 녹아서 처음 먹는 핑거푸드로 딱이에요",
+    tag: "14%",
+    sale: "19,800원",
+    price: "23,200원",
+    link: "https://naver.me/xRgrfoz2",
+    img: "img/rosy-puffs.svg",
+    emoji: "🍘"
+  },
+  {
     id: "suupy-nasal-aspirator",
     type: "추천템",
     partner: "slit",
@@ -31,7 +46,6 @@ window.PRODUCTS = [
     type: "추천템",
     partner: "slit",
     category: "패션템",
-    pick: true,
     name: "치즈실내복 [26 겨울] 메리 디즈니 실내복 낙낙핏",
     mom: "크리스마스 사진 찍는 날 입히면 딱이에요 🎄",
     sale: "19,800원",
@@ -225,7 +239,7 @@ window.PRODUCTS = [
     tag: "60일 대여",
     sale: "23,000원",
     price: "48,000원",
-    link: "https://naver.me/xRgrfoz2",
+    link: "https://smartstore.naver.com/littlebaby/products/4802715691",
     img: "img/play-jumper.svg",
     emoji: "🦘"
   }
