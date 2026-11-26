@@ -3,7 +3,7 @@
 // id       : 인포크링크 주소 끝부분 → https://puruland.github.io/puruland-shop/#id (누르면 그 카테고리가 열리고 상품으로 이동)
 // type     : "공구"(start/end 날짜 필요) 또는 "추천템"(일반 제휴 링크)
 // partner  : coupang / naver / slit
-// category : 일상템 / 패션템 / 인테리어템 / 주방템 / 이유식템
+// category : 일상템 / 패션템 / 인테리어템 / 주방템 / 이유식템 / 가성비 놀이템(1~2만원대)
 // pick     : true 로 하면 첫 화면 PURU'S PICK 에 올라가요 (하나만)
 // name     : 상품명    mom : 엄마 말투 한 줄
 // tag      : 작은 뱃지 (예: "17%", "팔로워 전용가")
@@ -90,5 +90,47 @@ window.PRODUCTS = [
     link: "https://link.coupang.com/a/iV8X4ib0Ng",
     img: "book_art.jpg",
     emoji: "🎨"
+  },
+  {
+    id: "cloth-peekaboo-book",
+    type: "추천템",
+    partner: "naver",
+    category: "가성비 놀이템",
+    name: "마이빈스토어 헝겊책 촉감책 까꿍놀이 (6~10개월 돌전 아기)",
+    mom: "까꿍 하면서 쥐고 물고 빨고, 혼자서도 한참 놀아요",
+    tag: "4%",
+    sale: "23,900원",
+    price: "25,000원",
+    link: "https://naver.me/5WUz4lvq",
+    img: "img/play-cloth-book.svg",
+    emoji: "🧸"
+  },
+  {
+    id: "kizeus-play-mobile",
+    type: "추천템",
+    partner: "naver",
+    category: "가성비 놀이템",
+    name: "키저스 플레이 베베 유모차 모빌 장난감 (카시트·신생아 선물)",
+    mom: "유모차·카시트에 걸어두면 외출길 칭얼거림이 줄어요",
+    tag: "41%",
+    sale: "27,900원",
+    price: "48,100원",
+    link: "https://naver.me/Gmp55JLO",
+    img: "img/play-mobile.svg",
+    emoji: "🎠"
+  },
+  {
+    id: "fingerfishing-rings",
+    type: "추천템",
+    partner: "naver",
+    category: "가성비 놀이템",
+    name: "핑거피싱 아기 체육관 소근육 발달 고리 장난감 토이버클 24P",
+    mom: "끼우고 빼고 연결하고, 소근육 놀이로 이만한 게 없어요",
+    tag: "82%",
+    sale: "17,800원",
+    price: "104,000원",
+    link: "https://naver.me/xAf88j1l",
+    img: "img/play-rings.svg",
+    emoji: "🟡"
   }
 ];
