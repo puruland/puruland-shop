@@ -156,7 +156,8 @@ h1{font-family:"Black Han Sans";font-weight:400;font-size:44px;background:#fff;b
     {k:'패션템', bg:'#E3F1FF', img:'img/cat-fashion.svg', st:'right:8px;bottom:-6px;height:96px'},
     {k:'인테리어템', bg:'#E6F7E1', img:'img/cat-interior.svg', st:'right:8px;bottom:4px;height:112px', wide:1},
     {k:'주방템', bg:'#FFF1C9', img:'img/cat-kitchen.svg', st:'right:8px;bottom:6px;width:104px'},
-    {k:'이유식템', bg:'#F1E6FF', img:'img/cat-babyfood.svg', st:'right:12px;bottom:-14px;height:104px;transform:rotate(8deg)'}
+    {k:'이유식템', bg:'#F1E6FF', img:'img/cat-babyfood.svg', st:'right:12px;bottom:-14px;height:104px;transform:rotate(8deg)'},
+    {k:'가성비 놀이템', sub:'1~2만원대', bg:'#FFE9D6', img:'img/cat-play.svg', st:'right:12px;bottom:6px;height:100px', wide:1}
   ];
   var today = new Date(); today.setHours(0,0,0,0);
   function diff(s){ return Math.round((new Date(s + 'T00:00:00') - today) / 864e5); }
@@ -200,7 +201,7 @@ h1{font-family:"Black Han Sans";font-weight:400;font-size:44px;background:#fff;b
   // 카테고리 타일
   document.getElementById('cats').innerHTML = CATS.map(function(c){
     var n = P.filter(function(p){ return p.category === c.k; }).length;
-    return '<a class="cat' + (c.wide ? ' wide' : '') + '" href="#c=' + encodeURIComponent(c.k) + '" style="background:' + c.bg + '"><b>' + c.k + '</b><span>' + (n ? n + '개' : '준비 중') + '</span><img src="' + c.img + '" alt="" style="' + c.st + '"></a>';
+    return '<a class="cat' + (c.wide ? ' wide' : '') + '" href="#c=' + encodeURIComponent(c.k) + '" style="background:' + c.bg + '"><b>' + c.k + '</b><span>' + (c.sub ? esc(c.sub) + ' · ' : '') + (n ? n + '개' : '준비 중') + '</span><img src="' + c.img + '" alt="" style="' + c.st + '"></a>';
   }).join('');
   var home = document.getElementById('home'), view = document.getElementById('view');
   function showCat(k, focus){
