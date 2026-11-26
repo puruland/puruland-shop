@@ -132,5 +132,73 @@ window.PRODUCTS = [
     link: "https://naver.me/xAf88j1l",
     img: "img/play-rings.svg",
     emoji: "🟡"
+  },
+  {
+    id: "huanger-monkey-ball-tower",
+    type: "추천템",
+    partner: "coupang",
+    category: "가성비 놀이템",
+    name: "후앙어 몽키 공굴리기 볼 타워 촉감발달완구",
+    mom: "공 넣고 데굴데굴 굴러가는 거 보면 눈이 반짝반짝해요",
+    sale: "7,970원",
+    link: "https://link.coupang.com/a/iZRPbbSGL6",
+    img: "https://thumbnail.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/803340127089259-aa55375e-d883-4bc4-9cef-ef4f227aa7c8.jpg",
+    emoji: "🐒"
+  },
+  {
+    id: "popup-animal-peekaboo",
+    type: "추천템",
+    partner: "coupang",
+    category: "가성비 놀이템",
+    name: "하늘썬별 유아용 팝업 동물친구 터치 까꿍놀이",
+    mom: "꾹 누르면 동물이 뿅! 까꿍 놀이에 꺄르르 웃어요",
+    tag: "48%",
+    sale: "12,990원",
+    price: "25,000원",
+    link: "https://link.coupang.com/a/iZRRS5nDFI",
+    img: "https://thumbnail.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2024/03/13/10/1/b8e4e31d-b0b3-4a22-a7ba-0448cd106d41.jpg",
+    emoji: "🐰"
+  },
+  {
+    id: "keycap-keyboard-toy",
+    type: "추천템",
+    partner: "naver",
+    category: "가성비 놀이템",
+    name: "위너유니 대왕 키캡 키보드 26구 키링 소리나는 장난감",
+    mom: "딸깍딸깍 누르는 맛에 엄마 키보드 대신 이걸 줘요",
+    tag: "40%",
+    sale: "6,550원",
+    price: "11,000원",
+    link: "https://naver.me/x7e77DEN",
+    img: "img/play-keycap.svg",
+    emoji: "⌨️"
+  },
+  {
+    id: "kizeus-spinpop",
+    type: "추천템",
+    partner: "naver",
+    category: "가성비 놀이템",
+    name: "키저스 빙글빙글 스핀팝 흡착 회전 딸랑이 세트 (백일·돌 아기 스피너)",
+    mom: "식탁에 붙여두면 빙글빙글 돌리느라 밥 먹는 시간이 평화로워요",
+    tag: "42%",
+    sale: "10,900원",
+    price: "18,890원",
+    link: "https://naver.me/FIc6N4Yd",
+    img: "img/play-spinner.svg",
+    emoji: "🌀"
+  },
+  {
+    id: "purbebe-rattle-teether-set",
+    type: "추천템",
+    partner: "naver",
+    category: "가성비 놀이템",
+    name: "푸르베베 열탕소독 가능 북유럽 감성 딸랑이 치발기 10종 세트",
+    mom: "열탕소독 돼서 입에 넣어도 안심, 선물용으로도 예뻐요",
+    tag: "20%",
+    sale: "28,000원",
+    price: "35,000원",
+    link: "https://naver.me/xgXll8cq",
+    img: "img/play-rattle.svg",
+    emoji: "🔔"
   }
 ];
