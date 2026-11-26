@@ -242,5 +242,33 @@ window.PRODUCTS = [
     link: "https://smartstore.naver.com/littlebaby/products/4802715691",
     img: "img/play-jumper.svg",
     emoji: "🦘"
+  },
+  {
+    id: "snail-sound-piano-book",
+    type: "추천템",
+    partner: "coupang",
+    category: "가성비 놀이템",
+    name: "꿈꾸는달팽이 사운드토이북 랄랄라 피아노",
+    mom: "건반 누르면 노래가 나와서 혼자서도 한참 연주해요",
+    tag: "23%",
+    sale: "21,500원",
+    price: "28,000원",
+    link: "https://link.coupang.com/a/iZR8g9ldls",
+    img: "https://thumbnail.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/c1ac/3c7a85e230c042fd902645f829865b7e4f670087795e4f1ff84b973fd8ef.jpg",
+    emoji: "🎹"
+  },
+  {
+    id: "casbi-tissue-play",
+    type: "추천템",
+    partner: "coupang",
+    category: "가성비 놀이템",
+    name: "캐스비 유아용 튼튼 티슈촉감놀이",
+    mom: "티슈 뽑기에 빠진 아기한테 마음껏 뽑으라고 줘요",
+    tag: "28%",
+    sale: "17,820원",
+    price: "25,000원",
+    link: "https://link.coupang.com/a/iZTV0lUvg4",
+    img: "https://thumbnail.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/392e/363e805c451942d6cc159ca0803c60866c729416866136d6a9df1ed6b3ed.jpg",
+    emoji: "🧻"
   }
 ];
