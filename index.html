@@ -54,6 +54,8 @@ h1{font-family:Gyuwon;font-weight:400;font-size:44px;background:#fff;border:3px 
 .back{font-size:13px;color:#555;text-decoration:none;display:inline-block;padding:4px 0}
 .vt{font-family:Gyuwon;font-size:24px;margin:6px 0 14px}.vt small{font-family:Gyuwon;font-size:13px;color:#888;margin-left:4px}
 .g{display:grid;grid-template-columns:1fr 1fr;gap:12px 10px}
+.subs{display:flex;gap:6px;flex-wrap:wrap;margin:-4px 0 14px}.subs a{font-size:13px;color:var(--ink);text-decoration:none;background:#fff;border:2px solid var(--ink);border-radius:99px;padding:4px 11px}
+.sh{display:flex;align-items:center;gap:8px;font-size:19px;margin:26px 0 12px;scroll-margin-top:12px}.sh img{height:34px}
 .c{background:#fff;border-radius:14px;padding:12px 10px 10px;box-shadow:0 3px 10px #00000014;display:flex;flex-direction:column;align-items:center;text-align:center;color:inherit;text-decoration:none;scroll-margin-top:20px}
 .pol{background:#fff;padding:4px 4px 13px;box-shadow:0 2px 6px #0002;position:relative;margin-bottom:9px}.pol img{width:84px;height:84px;object-fit:cover;display:block}
 .pol .em{width:84px;height:84px;display:grid;place-items:center;font-size:36px;background:#FFF1A8}
@@ -160,9 +162,9 @@ h1{font-family:Gyuwon;font-weight:400;font-size:44px;background:#fff;border:3px 
     {k:'인테리어템', bg:'#E6F7E1', img:'img/cat-interior.svg', st:'right:8px;bottom:4px;height:112px', wide:1},
     {k:'주방템', bg:'#FFF1C9', img:'img/cat-kitchen.svg', st:'right:8px;bottom:6px;width:104px'},
     {k:'이유식템', bg:'#F1E6FF', img:'img/cat-babyfood.svg', st:'right:12px;bottom:-14px;height:104px;transform:rotate(8deg)'},
-    {k:'하이체어', bg:'#FFF4D6', img:'img/cat-highchair.svg', st:'right:4px;bottom:2px;height:78px'},
     {k:'가성비 놀이템', sub:'1~2만원대', bg:'#FFE9D6', img:'img/cat-play.svg', st:'right:12px;bottom:6px;height:100px', wide:1}
   ];
+  var SUBIMG = {'하이체어템': 'img/cat-highchair.svg'};
   var today = new Date(); today.setHours(0,0,0,0);
   function diff(s){ return Math.round((new Date(s + 'T00:00:00') - today) / 864e5); }
   function state(p){
@@ -211,8 +213,15 @@ h1{font-family:Gyuwon;font-weight:400;font-size:44px;background:#fff;border:3px 
   function showCat(k, focus){
     var items = P.filter(function(p){ return inCat(p, k); });
     items.sort(function(a, b){ return (state(a) === 'closed') - (state(b) === 'closed'); });
-    view.innerHTML = '<a class="back" href="#">← 전체 카테고리</a><div class="vt">' + esc(k) + '<small>' + items.length + '개</small></div><div class="g">' +
-      (items.length ? items.map(card).join('') : '<div class="empty">곧 새 아이템이 찾아와요! 🧸</div>') + '</div>';
+    var subs = [], plain = items.filter(function(p){ if (p.sub && subs.indexOf(p.sub) < 0) subs.push(p.sub); return !p.sub; });
+    var html = '<a class="back" href="#">← 전체 카테고리</a><div class="vt">' + esc(k) + '<small>' + items.length + '개</small></div>';
+    if (subs.length) html += '<div class="subs">' + subs.map(function(sb){ return '<a href="javascript:void(0)" onclick="document.getElementById(\'sub-' + esc(sb) + '\').scrollIntoView({behavior:\'smooth\'})">' + esc(SUBIMG[sb] ? '🪑 ' : '') + esc(sb) + ' ›</a>'; }).join('') + '</div>';
+    if (plain.length || !subs.length) html += '<div class="g">' + (plain.length ? plain.map(card).join('') : '<div class="empty">곧 새 아이템이 찾아와요! 🧸</div>') + '</div>';
+    subs.forEach(function(sb){
+      var its = items.filter(function(p){ return p.sub === sb; });
+      html += '<div class="sh" id="sub-' + esc(sb) + '">' + (SUBIMG[sb] ? '<img src="' + SUBIMG[sb] + '" alt="">' : '') + esc(sb) + '<small style="font-size:13px;color:#888">' + its.length + '개</small></div><div class="g">' + its.map(card).join('') + '</div>';
+    });
+    view.innerHTML = html;
     home.hidden = true; view.hidden = false;
     if (focus){
       var el = document.getElementById(focus);
@@ -228,6 +237,7 @@ h1{font-family:Gyuwon;font-weight:400;font-size:44px;background:#fff;border:3px 
   }
   function route(){
     var h = decodeURIComponent(location.hash.slice(1));
+    if (h === 'c=하이체어'){ showCat('일상템'); var e = document.getElementById('sub-하이체어템'); if (e) setTimeout(function(){ e.scrollIntoView(); }, 50); return; }
     if (h.indexOf('c=') === 0) return showCat(h.slice(2));
     var p = h && P.filter(function(x){ return x.id === h; })[0];
     if (p && p.guide) return showGuide(p);
