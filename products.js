@@ -5,6 +5,7 @@
 // partner  : coupang / naver / slit
 // category : 일상템 / 패션템 / 인테리어템 / 주방템 / 이유식템 / 가성비 놀이템(1~2만원대)
 //            여러 카테고리에 같이 보이게 하려면 ["일상템", "주방템"] 처럼 써요
+// note     : 이 상품 앞에 구분선 + 안내 문구를 넣어요
 // sub      : 카테고리 안의 작은 묶음 (예: 일상템 안의 "하이체어템")
 // pick     : true 로 하면 첫 화면 PURU'S PICK 에 올라가요 (하나만)
 // name     : 상품명    mom : 엄마 말투 한 줄
@@ -375,5 +376,50 @@ window.PRODUCTS = [
     link: "https://link.coupang.com/a/i2uDEX2b6q",
     img: "img/hc-backpocket.jpg",
     emoji: "👜"
+  },
+  {
+    id: "hc-bunny-fabric-cushion",
+    type: "추천템",
+    partner: "naver",
+    category: "일상템",
+    sub: "하이체어템",
+    note: "방수쿠션에 좀 더 비싸지만 푸루맘이 보고 이쁘다 생각한 디자인 방수쿠션도 참고해보세용 💕",
+    name: "트립트랩 방수 커버 방석 식탁의자 패브릭 쿠션",
+    mom: "토끼 무늬가 너무 귀여워서 의자가 확 예뻐져요",
+    tag: "10%",
+    sale: "33,000원",
+    price: "36,700원",
+    link: "https://naver.me/FlBXfuQ0",
+    img: "img/hc-bunny-cushion.jpg",
+    emoji: "🐰"
+  },
+  {
+    id: "hc-marolotte-harness-cushion",
+    type: "추천템",
+    partner: "naver",
+    category: "일상템",
+    sub: "하이체어템",
+    name: "마롤로뜨 트립트랩 호환 쿠션 하네스",
+    mom: "공룡 무늬 쿠션에 하네스까지 있어서 든든해요",
+    tag: "2%",
+    sale: "39,900원",
+    price: "41,000원",
+    link: "https://naver.me/GsBRnV78",
+    img: "img/hc-marolotte-harness.jpg",
+    emoji: "🦕"
+  },
+  {
+    id: "hc-saga-angelic-cushion",
+    type: "추천템",
+    partner: "coupang",
+    category: "일상템",
+    sub: "하이체어템",
+    name: "사가 엔젤릭 스토케 트립트랩 방수 쿠션 하네스",
+    mom: "빈티지한 패턴이라 사진 찍으면 분위기가 달라요",
+    tag: "10%",
+    sale: "53,800원",
+    link: "https://link.coupang.com/a/i2zV4U8Nm8",
+    img: "img/hc-saga-angelic.jpg",
+    emoji: "🪑"
   }
 ];

@@ -54,6 +54,7 @@ h1{font-family:Gyuwon;font-weight:400;font-size:44px;background:#fff;border:3px 
 .back{font-size:13px;color:#555;text-decoration:none;display:inline-block;padding:4px 0}
 .vt{font-family:Gyuwon;font-size:24px;margin:6px 0 14px}.vt small{font-family:Gyuwon;font-size:13px;color:#888;margin-left:4px}
 .g{display:grid;grid-template-columns:1fr 1fr;gap:12px 10px}
+.divn{grid-column:1/-1;display:flex;align-items:center;gap:10px;margin:14px 0 2px;font-size:14px;line-height:1.45;color:#5a4a3a;text-align:center}.divn:before,.divn:after{content:"";flex:1;border-top:2px dashed #c9b79c}.divn span{max-width:78%}
 .subs{display:flex;gap:6px;flex-wrap:wrap;margin:-4px 0 14px}.subs a{font-size:13px;color:var(--ink);text-decoration:none;background:#fff;border:2px solid var(--ink);border-radius:99px;padding:4px 11px}
 .sh{display:flex;align-items:center;gap:8px;font-size:19px;margin:26px 0 12px;scroll-margin-top:12px}.sh img{height:34px}
 .c{background:#fff;border-radius:14px;padding:12px 10px 10px;box-shadow:0 3px 10px #00000014;display:flex;flex-direction:column;align-items:center;text-align:center;color:inherit;text-decoration:none;scroll-margin-top:20px}
@@ -194,7 +195,7 @@ h1{font-family:Gyuwon;font-weight:400;font-size:44px;background:#fff;border:3px 
   function tip(p){ return p.guide === 'seller' ? '<span class="tip">🔥 품절 직전!<u>이 방법으로도 살 수 있어요 ›</u></span>' : ''; }
   function card(p, i){
     var s = state(p), ext = (!p.guide && (s === 'pick' || s === 'open')) ? ' target="_blank" rel="noopener"' : '';
-    return '<a class="c' + (s === 'closed' ? ' closed' : '') + '" id="' + esc(p.id) + '" href="' + href(p) + '"' + ext + '>' +
+    return (p.note ? '<div class="divn"><span>' + esc(p.note) + '</span></div>' : '') + '<a class="c' + (s === 'closed' ? ' closed' : '') + '" id="' + esc(p.id) + '" href="' + href(p) + '"' + ext + '>' +
       '<div class="pol" style="transform:rotate(' + rot[i % rot.length] + 'deg)">' + photo(p) + '</div>' +
       '<h3>' + esc(p.name) + '</h3>' + price(p) + tip(p) + say(p, i) + '</a>';
   }
