@@ -389,7 +389,7 @@ window.PRODUCTS = [
     tag: "10%",
     sale: "33,000원",
     price: "36,700원",
-    link: "https://naver.me/FlBXfuQ0",
+    link: "https://naver.me/GsBRnV78",
     img: "img/hc-bunny-cushion.jpg",
     emoji: "🐰"
   },
@@ -404,7 +404,7 @@ window.PRODUCTS = [
     tag: "2%",
     sale: "39,900원",
     price: "41,000원",
-    link: "https://naver.me/GsBRnV78",
+    link: "https://naver.me/FlBXfuQ0",
     img: "img/hc-marolotte-harness.jpg",
     emoji: "🦕"
   },
