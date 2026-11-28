@@ -152,12 +152,15 @@ h1{font-family:Gyuwon;font-weight:400;font-size:44px;background:#fff;border:3px 
 <script>
 (function(){
   var P = (window.PRODUCTS || []).slice();
+  function inCat(p, k){ return Array.isArray(p.category) ? p.category.indexOf(k) > -1 : p.category === k; }
+  function cat0(p){ return Array.isArray(p.category) ? p.category[0] : p.category; }
   var CATS = [
     {k:'일상템', bg:'#FFE3EC', img:'img/cat-daily.svg', st:'right:6px;bottom:8px;width:104px'},
     {k:'패션템', bg:'#E3F1FF', img:'img/cat-fashion.svg', st:'right:8px;bottom:-6px;height:96px'},
     {k:'인테리어템', bg:'#E6F7E1', img:'img/cat-interior.svg', st:'right:8px;bottom:4px;height:112px', wide:1},
     {k:'주방템', bg:'#FFF1C9', img:'img/cat-kitchen.svg', st:'right:8px;bottom:6px;width:104px'},
     {k:'이유식템', bg:'#F1E6FF', img:'img/cat-babyfood.svg', st:'right:12px;bottom:-14px;height:104px;transform:rotate(8deg)'},
+    {k:'하이체어', bg:'#FFF4D6', img:'img/cat-highchair.svg', st:'right:4px;bottom:2px;height:78px'},
     {k:'가성비 놀이템', sub:'1~2만원대', bg:'#FFE9D6', img:'img/cat-play.svg', st:'right:12px;bottom:6px;height:100px', wide:1}
   ];
   var today = new Date(); today.setHours(0,0,0,0);
@@ -201,12 +204,12 @@ h1{font-family:Gyuwon;font-weight:400;font-size:44px;background:#fff;border:3px 
   if (deals.length) document.getElementById('deals').innerHTML = '<div class="sec"><span class="stamp" style="background:#ff3b5c;color:#fff">NOW</span>진행 중인 공구</div><div class="view" style="padding-top:0"><div class="g">' + deals.map(card).join('') + '</div></div>';
   // 카테고리 타일
   document.getElementById('cats').innerHTML = CATS.map(function(c){
-    var n = P.filter(function(p){ return p.category === c.k; }).length;
+    var n = P.filter(function(p){ return inCat(p, c.k); }).length;
     return '<a class="cat' + (c.wide ? ' wide' : '') + '" href="#c=' + encodeURIComponent(c.k) + '" style="background:' + c.bg + '"><b>' + c.k + '</b><span>' + (c.sub ? esc(c.sub) + ' · ' : '') + (n ? n + '개' : '준비 중') + '</span><img src="' + c.img + '" alt="" style="' + c.st + '"></a>';
   }).join('');
   var home = document.getElementById('home'), view = document.getElementById('view');
   function showCat(k, focus){
-    var items = P.filter(function(p){ return p.category === k; });
+    var items = P.filter(function(p){ return inCat(p, k); });
     items.sort(function(a, b){ return (state(a) === 'closed') - (state(b) === 'closed'); });
     view.innerHTML = '<a class="back" href="#">← 전체 카테고리</a><div class="vt">' + esc(k) + '<small>' + items.length + '개</small></div><div class="g">' +
       (items.length ? items.map(card).join('') : '<div class="empty">곧 새 아이템이 찾아와요! 🧸</div>') + '</div>';
@@ -218,7 +221,7 @@ h1{font-family:Gyuwon;font-weight:400;font-size:44px;background:#fff;border:3px 
   }
   function showGuide(p){
     var buy = '<a class="buy" href="' + esc(p.link) + '" target="_blank" rel="noopener">🛒 창의력 책 UP 구매하러 가기 ›</a>';
-    view.innerHTML = '<a class="back" href="#c=' + encodeURIComponent(p.category) + '">← ' + esc(p.category) + '</a>' +
+    view.innerHTML = '<a class="back" href="#c=' + encodeURIComponent(cat0(p)) + '">← ' + esc(cat0(p)) + '</a>' +
       '<div class="pp">' + photo(p) + '<div><h3>' + esc(p.name) + '</h3>' + price(p) + say(p, 0) + '</div></div>' + buy +
       '<div class="gp">' + document.getElementById('tpl-' + p.guide).innerHTML + '</div>' + buy;
     home.hidden = true; view.hidden = false; window.scrollTo(0, 0);
@@ -228,7 +231,7 @@ h1{font-family:Gyuwon;font-weight:400;font-size:44px;background:#fff;border:3px 
     if (h.indexOf('c=') === 0) return showCat(h.slice(2));
     var p = h && P.filter(function(x){ return x.id === h; })[0];
     if (p && p.guide) return showGuide(p);
-    if (p && p.category) return showCat(p.category, p.id);
+    if (p && p.category) return showCat(cat0(p), p.id);
     view.hidden = true; home.hidden = false;
   }
   window.addEventListener('hashchange', route); route();

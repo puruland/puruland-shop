@@ -3,7 +3,8 @@
 // id       : 인포크링크 주소 끝부분 → https://puruland.github.io/puruland-shop/#id (누르면 그 카테고리가 열리고 상품으로 이동)
 // type     : "공구"(start/end 날짜 필요) 또는 "추천템"(일반 제휴 링크)
 // partner  : coupang / naver / slit
-// category : 일상템 / 패션템 / 인테리어템 / 주방템 / 이유식템 / 가성비 놀이템(1~2만원대)
+// category : 일상템 / 패션템 / 인테리어템 / 주방템 / 이유식템 / 하이체어 / 가성비 놀이템(1~2만원대)
+//            여러 카테고리에 같이 보이게 하려면 ["일상템", "하이체어"] 처럼 써요
 // pick     : true 로 하면 첫 화면 PURU'S PICK 에 올라가요 (하나만)
 // name     : 상품명    mom : 엄마 말투 한 줄
 // tag      : 작은 뱃지 (예: "17%", "팔로워 전용가")
@@ -270,5 +271,101 @@ window.PRODUCTS = [
     link: "https://link.coupang.com/a/iZTV0lUvg4",
     img: "https://thumbnail.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/392e/363e805c451942d6cc159ca0803c60866c729416866136d6a9df1ed6b3ed.jpg",
     emoji: "🧻"
+  },
+  {
+    id: "hc-lunell-tray-cover",
+    type: "추천템",
+    partner: "naver",
+    category: ["일상템", "하이체어"],
+    name: "루넬 스토케 트립트랩 트레이 호환 커버 트트커 항균",
+    mom: "트레이 위에 쏙 끼우면 이유식 전쟁 후 설거지가 반으로 줄어요",
+    tag: "19%",
+    sale: "12,900원",
+    price: "16,000원",
+    link: "https://naver.me/GNJIZm5I",
+    img: "img/hc-lunell-cover.jpg",
+    emoji: "🍽️"
+  },
+  {
+    id: "hc-zembebe-silicone-mat",
+    type: "추천템",
+    partner: "naver",
+    category: ["일상템", "하이체어"],
+    name: "[호환] 젬베베 스토케 트립트랩 커버 트레이 매트",
+    mom: "말랑한 실리콘이라 숟가락 탕탕 쳐도 조용하고 미끄러지지 않아요",
+    tag: "41%",
+    sale: "12,900원",
+    price: "21,900원",
+    link: "https://naver.me/GVVXqKjy",
+    img: "img/hc-silicone-mat.jpg",
+    emoji: "🧽"
+  },
+  {
+    id: "hc-marolotte-cushion",
+    type: "추천템",
+    partner: "naver",
+    category: ["일상템", "하이체어"],
+    name: "[호환] 마롤로뜨 트립트랩 쿠션 세트 TPU 방수",
+    mom: "흘려도 쓱 닦이는 방수 쿠션이라 엉덩이도 포근, 엄마 마음도 포근해요",
+    tag: "38%",
+    sale: "24,900원",
+    price: "40,000원",
+    link: "https://naver.me/5bCQBSaI",
+    img: "img/hc-cushion.jpg",
+    emoji: "🪑"
+  },
+  {
+    id: "hc-jinimall-shelf",
+    type: "추천템",
+    partner: "naver",
+    category: ["일상템", "하이체어"],
+    name: "지니몰 부착식 슬라이딩 수납 선반",
+    mom: "턱받이·물티슈·숟가락을 식탁 옆에 착 붙여두니 동선이 짧아져요",
+    sale: "14,200원",
+    link: "https://naver.me/FZoMrMRW",
+    img: "img/hc-shelf.jpg",
+    emoji: "🧺"
+  },
+  {
+    id: "hc-food-catcher",
+    type: "추천템",
+    partner: "naver",
+    category: ["일상템", "하이체어"],
+    name: "하이체어 푸드캐처 식탁의자 이유식 받침대",
+    mom: "바닥에 떨어질 밥알을 중간에서 다 받아줘서 바닥 청소 끝이에요",
+    tag: "10%",
+    sale: "39,400원",
+    price: "43,800원",
+    link: "https://naver.me/GhwT0Fjc",
+    img: "img/hc-foodcatcher.jpg",
+    emoji: "🥣"
+  },
+  {
+    id: "hc-lunell-multi-strap",
+    type: "추천템",
+    partner: "coupang",
+    category: ["일상템", "하이체어"],
+    name: "루넬 실리콘 멀티 스트랩 브라운+베이지 2개",
+    mom: "던지고 줍고 무한반복 끝! 장난감·치발기를 의자에 묶어둬요",
+    tag: "32%",
+    sale: "7,730원",
+    price: "11,500원",
+    link: "https://link.coupang.com/a/i2uxtjpyDI",
+    img: "img/hc-multistrap.jpg",
+    emoji: "🧸"
+  },
+  {
+    id: "hc-lunell-back-pocket",
+    type: "추천템",
+    partner: "coupang",
+    category: ["일상템", "하이체어"],
+    name: "루넬 스토케 트립트랩 호환 유아식탁의자 백포켓",
+    mom: "물티슈랑 장난감을 의자 뒤에 쏙, 식탁 위가 깔끔해져요",
+    tag: "28%",
+    sale: "27,360원",
+    price: "38,000원",
+    link: "https://link.coupang.com/a/i2uDEX2b6q",
+    img: "img/hc-backpocket.jpg",
+    emoji: "👜"
   }
 ];
